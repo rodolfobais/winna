@@ -206,9 +206,10 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 			    <div class="col-sm-<?php echo $product_center_grid; ?> product-center clearfix">
 				<div itemprop="offerDetails" itemscope itemtype="http://schema.org/Offer">
 					<h2 class="product-name">
-						<?php echo $heading_title; ?> | 
-						<?php if ($price) { ?>
-					<div class="price">
+						<?php echo $heading_title; ?>
+					</h2>
+					<?php if ($price) { ?>
+						<div class="price">
 							<div class="main-price">
 								<?php if (!$special) { ?>
 									<span class="price-new">
@@ -223,7 +224,7 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 									</span> 
 								<?php } ?>
 							</div>
-							
+								
 							<div class="other-price">
 								<?php if ($tax) { ?>
 									<span class="price-tax"><?php echo $text_tax; ?> <span id="price-tax"><?php echo $tax; ?></span></span><br />
@@ -240,10 +241,8 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 									</div>
 								<?php } ?>
 							</div>
-					</div>
-					<?php } ?>
-					</h2>
-					
+						</div>
+					<?php } ?>					
 				<div class="modelo"><?php echo $text_model; ?> <?php echo $model; ?> </div>
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -492,23 +491,122 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 			        </div></div>
 					
 		
-					<div class="panel panel-default">
-			    <div class="panel-heading">
-			      <h4 class="panel-title">
-			        <a data-toggle="collapse" data-parent="#accordion" href="#Details">
-			          INFORMACIÓN DE ENVÍO
-			        </a>
-			      </h4>
-			    </div>
-				
-	      		<div id="Details" class="panel-collapse collapse">
-	      			<div class="panel-body">
-	      				<?php echo $details; ?>
-	      			</div>
-	    		</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#informacion_de_envio">
+						INFORMACIÓN DE ENVÍO
+						</a>
+					</h4>
+				</div>
+			
+				<div id="informacion_de_envio" class="panel-collapse collapse">
+					<div class="panel-body">
+						ENTREGA EN DOMICILIO:<br/>
+						CABA - GBA: $000<br/>
+						INTERIOR DEL PAÍS: $000 <br/><br/>
+
+						ENTREGA EN SUCURSAL OCA:<br/>
+
+						PODRÁS RECIBIR TU PEDIDO EN LA SUCURSAL DE OCA MAS CERCANA A TU DOMICILIO.<br/><br/>
+
+						CABA-GBA: $000<br/>
+						INTERIOR DEL PAÍS: $000<br/><br/>
+
+						CONSULTÁ LAS SUCURSALES AQUÍ<br/>
+						ACTUALMENTE NO CONTAMOS CON ENVÍOS FUERA DE ARGENTINA. SUSCRIBITE A NUESTRO NEWSLETTER PARA ENTERARTE CUANDO COMENCEMOS A REALIZAR ENVÍOS AL EXTERIOR. TODOS NUESTROS ENVÍOS DENTRO DE ARGENTINA LOS REALIZAMOS A TRAVÉS DE OCA, CON UNA DEMORA DE ENTRE 48 A 96 HORAS HÁBILES DESPUÉS DE HABER REALIZADO EL PEDIDO Y CONFIRMADO EL PAGO.<br/><br/>
+
+						ENTREGAS:<br/>
+						LAS ENTREGAS DE PEDIDOS A DOMICILIO SE REALIZAN DE LUNES A VIERNES DE 9 A 18HS. LOS PEDIDOS ENVIADOS A SUCURSAL OCA SE ENTREGAN DE LUNES A VIERNES DE 9 A 18HS Y SÁBADOS DE 9 A 13 HS. NO SE ENTREGAN PEDIDOS DOMINGOS NI FERIADOS.<br/>
+						LA ENTREGA PUEDE SER RECIBIDA POR CUALQUIER PERSONA MAYOR DE 18 AÑOS QUE SE ENCUENTRE EN TU DOMICILIO, PRESENTANDO SU DNI. SI NO TE ENCONTRÁS EN TU DOMICILIO PARA RECIBIR LA ENTREGA DE TU PAQUETE, EL TRANSPORTISTA DARÁ AVISO VÍA ONLINE CARGANDO TODO LO SUCEDIDO EN EL SEGUIMIENTO Y SE REALIZARÁ UN SEGUNDO INTENTO DE VISITA EL SIGUIENTE DÍA HÁBIL. ES POR ESO QUE EL CLIENTE DEBE REALIZAR EL SEGUIMIENTO ONLINE DEL PAQUETE PARA ESTAR INFORMADO DEL MISMO.<br/>
+						SI TANTO EN EL 1ER COMO EN EL 2DO INTENTO NO SE COMPLETA LA ENTREGA, EL PAQUETE VOLVERÁ A LA SUCURSAL OCA, Y SE MANTENDRÁ ALLÍ DURANTE 7 DÍAS PARA QUE PUEDAS RETIRARLO. SI NO ES RETIRADO, EL PEDIDO SERÁ DEVUELTO A NUESTRAS OFICINAS Y TE CONTACTAREMOS PARA COORDINAR UNA NUEVA ENTREGA ABONANDO UN NUEVO COSTO DE ENVÍO. DE NO REALIZARSE EL PAGO PARA EL NUEVO ENVÍO DENTRO DE LOS 90 DÍAS SIGUIENTES, WINNA LOVE SE RESERVA EL DERECHO DE ANULAR EL PEDIDO.<br/>
+						DURANTE EL PERÍODO DE HOT SALE TODOS LOS ENVÍOS POR OCA PUEDEN CONTAR CON UNA DEMORA DE HASTA 15 DÍAS POR LA ALTA DEMANDA.<br/><br/>
+
+						ATENCIÓN AL CLIENTE: <br/>
+						EL HORARIO DE ATENCIÓN AL CLIENTE Y RECEPCIÓN DE PEDIDOS DE LA TIENDA ES DE 10 A 17HS DE LUNES A VIERNES. SI CONFIRMASTE TU PEDIDO FUERA DE ESTE HORARIO SERÁ PROCESADO AL SIGUIENTE DÍA HÁBIL. LO MISMO PARA AQUELLOS QUE SE REALICEN LOS SÁBADOS, DOMINGOS Y FERIADOS. TENÉ EN CUENTA QUE CADA PEDIDO SOLO PUEDE SER ENTREGADO EN UN SOLO LUGAR Y, UNA VEZ DESPACHADO, EL PEDIDO NO PODRÁ SER REDIRECCIONADO.<br/><br/>
+
+						SEGUIMIENTO:<br/>
+						PODÉS CHEQUEAR DENTRO DE TU CUENTA LA SECCIÓN MIS PEDIDOS PARA CONOCER EL ESTADO DE TU COMPRA.<br/>
+						EL NÚMERO DE GUÍA QUE TE ENVIAMOS POR MAIL TE PERMITIRÁ REALIZAR EL SEGUIMIENTO ONLINE DE TU PEDIDO UNA VEZ QUE EL MISMO FUE DESPACHADO. PODRÁS HACERLO A TRAVÉS DE WWW1.OCA.COM<br/><br/>
+
+						SI TU PEDIDO SE RETRASA:<br/>
+						ENVIANOS UN MAIL A INFO@WINNALOVE.COM CON EL NÚMERO DE PEDIDO PARA QUE PODAMOS SOLUCIONARLO.<br/>						
+						<?php echo $details; ?>
+					</div>
+				</div>				
+	  		</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#formas_de_pago">FORMAS DE PAGO</a>
+					</h4>
+				</div>
+			
+				<div id="formas_de_pago" class="panel-collapse collapse">
+					<div class="panel-body">
+						PODRÁS ABONAR TUS COMPRAS EN NUESTRO SITIO CON MERCADO PAGO - TARJETAS DE CRÉDITO: VISA, MASTERCARD, AMERICAN EXPRESS, TARJETA NARANJA, ARGENCARD, TARJETA SHOPPING, NATIVA, CENCOSUD Y CABAL. <br/><br/>
+
+						MERCADO PAGO -CUPON DE PAGO: PARA ABONAR EN SUCURSALES DE RAPIPAGO, PAGOFÁCIL, LINK Y PROVINCIA NET. ABONANDO MEDIANTE EL SERVICIO DE MERCADOPAGO CONTAS CON 5 DÍAS HÁBILES PARA REALIZAR EL PAGO DE TU PEDIDO. CUMPLIDO ESE PLAZO TU COMPRA SERÁ CANCELADA Y LOS PRODUCTOS NO SERÁN ENVIADOS.GARANTIZAMOS UN NIVEL DE SEGURIDAD PARA TODAS LAS COMPRAS UTILIZANDO LA TECNOLOGÍA SPS QUE GARANTIZA UNA TRANSACCIÓN 100% SEGURA.<br/><br/>
+
+						NO ALMACENAREMOS NINGÚN DATO DE TU TARJETA EN NUESTRO SITIO.
+					</div>
+				</div>				
+	  		</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#cambios_y_devoluciones">CAMBIOS Y DEVOLUCIONES</a>
+					</h4>
+				</div>
+			
+				<div id="cambios_y_devoluciones" class="panel-collapse collapse">
+					<div class="panel-body">
+						CAMBIOS:<br/><br/>
+						TODOS LOS PRODUCTOS TIENEN CAMBIO, A EXCEPCIÓN DE LA CATEGORÍA ACCESORIOS, DENTRO DE LOS 30 DÍAS DE EFECTUADA LA COMPRA, CON LA ETIQUETA CORRESPONDIENTE Y EL TICKET ORIGINAL O DE CAMBIO, EN CUALQUIERA DE NUESTROS LOCALES EXCLUSIVOS O ENVIÁNDOLAS POR CORREO AL REMITENTE DE NUESTRO ENVÍO. EL COSTO DE ENVÍO Y REENVÍO ESTARÁN A CARGO DEL CLIENTE, EXCEPTO CUANDO SE TRATE DE UN CAMBIO POR UN DEFECTO DE LA PRENDA.<br/>
+						LOS PRODUCTOS DE LA CATEGORÍA “VINTAGE” SOLO SE PODRÁN CAMBIAR POR PRODUCTOS DE LA MISMA CATEGORÍA EN LOS LOCALES CON SELECCIÓN DE PRENDAS DISCONTINUAS.<br/>
+						EN LA SECCIÓN “STORE” ENCONTRÁS LAS DIRECCIONES DE LOS LOCALES EXCLUSIVOS Y SUS COLECCIONES DISPONIBLES.<br/><br/><br/>
+
+						DEVOLUCIONES:<br/><br/>
+						SI EL PRODUCTO QUE RECIBISTE TIENE ALGUNA FALLA O NO SE CORRESPONDE CON EL PRODUCTO QUE SELECCIONASTE, COMUNICATE CON NOSOTROS DENTRO DE LAS 48 HORAS HÁBILES DE RECIBIDA TU COMPRA AL 5411 4613-9691 O POR MAIL A INFO@WINNALOVE . CONSERVÁ SIEMPRE LAS ETIQUETAS ORIGINALES Y EL TICKET DE COMPRA.
+					</div>
+				</div>				
+	  		</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#talles">TALLES</a>
+					</h4>
+				</div>
+			
+				<div id="talles" class="panel-collapse collapse">
+					<div class="panel-body">
+						<img src="http://www.tulocalonline.com/edit/image/catalog/BANNERS/talles/jeans_690.jpg" style="width: 690px;"><br/>
+						<img src="http://www.tulocalonline.com/edit/image/catalog/BANNERS/talles/sup_690.jpg" style="width: 690px;"><br/>
+						<img src="http://www.tulocalonline.com/edit/image/catalog/BANNERS/talles/inf_690.jpg" style="width: 690px;">
+					</div>
+				</div>				
 	  		</div>
 			
-			
+			<?php if($theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'status' ) == 1 || count($product_custom_block)) { ?>
+					<div id="product_custom_block">
+						<?php if($theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'status' ) == 1) { ?>
+						<div class="product-block">
+							<?php if($theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'heading' ) != '') { ?>
+							<h4 class="title-block"><?php echo $theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'heading' ); ?></h4>
+							<div class="strip-line"></div>
+							<?php } ?>
+							<div class="block-content">
+								<?php echo html_entity_decode($theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'text' )); ?>
+							</div>
+						</div>
+						<?php } ?>
+						
+						<?php foreach ($product_custom_block as $module) { echo $module; } ?>
+					</div>
+				<?php } ?>
 			
 			         
 			        <?php if ($minimum > 1) { ?>
@@ -541,23 +639,7 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 		    </div>
     	</div>
     	
-    	<?php if($theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'status' ) == 1 || count($product_custom_block)) { ?>
-    	<div class="col-sm-3">
-    	     <?php if($theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'status' ) == 1) { ?>
-    		<div class="product-block">
-    			<?php if($theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'heading' ) != '') { ?>
-    			<h4 class="title-block"><?php echo $theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'heading' ); ?></h4>
-    			<div class="strip-line"></div>
-    			<?php } ?>
-    			<div class="block-content">
-    				<?php echo html_entity_decode($theme_options->get( 'custom_block', 'product_page', $config->get( 'config_language_id' ), 'text' )); ?>
-    			</div>
-    		</div>
-    		<?php } ?>
-    		
-    		<?php foreach ($product_custom_block as $module) { echo $module; } ?>
-    	</div>
-    	<?php } ?>
+    	
     </div>
   </div>
   
