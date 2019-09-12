@@ -1,0 +1,499 @@
+---------- Date: 2019-08-22 14:40:16 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=catalog/product&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/option_sku_2.3_only.xml
+   id        : Option SKU 2.3
+   version   : 2.3
+   vqmver    : 2.6.x
+   author    : Inception System
+
+File Name    : admin/language/en-gb/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['entry_option_value']     = 'Option Value';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 14:42:36 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/module/contabilium&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 14:55:01 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/modification/refresh&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/template/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 14:55:45 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/modification&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 14:55:48 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/modification/refresh&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/template/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 15:17:05 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=localisation/stock_status&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:04:14 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=catalog/product/edit&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo&product_id=3731
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/product_importexport_suite.xml
+   id        : Product Import Export Suite (FREE)
+   version   : 1.0
+   vqmver    : 2.6.0
+   author    : Module Points
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/menu.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/menu.tpl] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/default/template/product/product.twig] (SKIPPED)
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): $this->db->query("INSERT INTO " . DB_PREFIX . "product_image SET product_id = '" . (int)$product_id . "', image = '" . $this->db->escape($product_image['image']) . "', sort_order = '" . (int)$product_image['sort_order'] . "'");
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/template/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:05:54 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=catalog/stock&token=h2VoK6zsu397g09gp5hFc6BiMM2Wb3Yj
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:13:17 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/installer&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:18:49 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/extension&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:24:13 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/modification&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:24:18 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/modification/refresh&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/install.xml
+   id        : 
+   version   : 1.3.6
+   vqmver    : 
+   author    : open4dev
+
+File Name    : admin/model/catalog/product.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET product_id = '" . (int)$product_id . "', option_id = '" . (int)$product_option['option_id'] . "', required = '" . (int)$product_option['required'] . "'");
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): $this->db->query("INSERT INTO " . DB_PREFIX . "product_image SET product_id = '" . (int)$product_id . "', image = '" . $this->db->escape($product_image['image']) . "', sort_order = '" . (int)$product_image['sort_order'] . "'");
+
+File Name    : system/library/template/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:24:36 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=catalog/product/edit&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo&product_id=3731
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/install.xml
+   id        : 
+   version   : 1.3.6
+   vqmver    : 
+   author    : open4dev
+
+File Name    : system/library/cart/cart.php(4)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $option_query = $this->db->query("SELECT po.product_option_id
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:24:50 ~ IP : 109.129.173.196 ----------
+REQUEST URI : /edit/admin/index.php?route=catalog/product&token=FWUnSkDYyfODBgArpNNTMbgfZ0zc2gVs
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/install.xml
+   id        : 
+   version   : 1.3.6
+   vqmver    : 
+   author    : open4dev
+
+File Name    : admin/view/template/catalog/product_list.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php if ($success) { ?>
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:28:47 ~ IP : 109.129.173.196 ----------
+REQUEST URI : /edit/
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : catalog/controller/event/theme.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : catalog/controller/event/theme.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 17:29:40 ~ IP : 109.129.173.196 ----------
+REQUEST URI : /edit/index.php?route=product/product&product_id=3693&search=babu
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/install.xml
+   id        : 
+   version   : 1.3.6
+   vqmver    : 
+   author    : open4dev
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 18:00:48 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/module/contabilium&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 18:25:38 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/index.php?route=product/product&path=192_202&product_id=3647
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 18:27:25 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/index.php?route=extension/payment/mp_ticket/payment/&payment_method_id=redpagos
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-08-22 18:43:04 ~ IP : 200.125.116.191 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/openbay/getorderinfo&token=xiRaHoMWtfVa3xwTs1s1ra3vFTOp7OZo&order_id=2520&status_id=22
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+

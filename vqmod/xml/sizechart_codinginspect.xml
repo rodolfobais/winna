@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Product Size Chart</id>
+	<version>1.0</version>
+	<author>Coding Inspect</author>
+	<file name="admin/controller/common/column_left.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[if ($catalog) {]]></search>
+			<add><![CDATA[
+			if ($this->user->hasPermission('access', 'catalog/cisizechart')) {
+				$this->load->language('catalog/cisizechart');
+				$catalog[] = array(
+					'name'	   => $this->language->get('text_cisizechart'),
+					'href'     => $this->url->link('catalog/cisizechart', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
+			]]>
+			</add>
+		</operation>
+	</file>
+	<file name="admin/controller/common/menu.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[$data['home']]]></search>
+			<add><![CDATA[
+		$this->load->language('catalog/cisizechart');
+		$data['text_cisizechart'] = $this->language->get('text_cisizechart');
+		$data['cisizechart'] = $this->url->link('catalog/cisizechart', 'token=' . $this->session->data['token'], 'SSL');
+				]]>
+			</add>
+		</operation>
+	</file>
+	<file name="admin/view/template/common/menu.tpl">
+		<operation error="skip">
+			<search position="after"><![CDATA[<?php echo $text_module; ?></a></li>]]></search>
+			<add><![CDATA[
+			<li><a href="<?php echo $cisizechart; ?>"><?php echo $text_cisizechart; ?></a></li>
+				]]>
+			</add>
+		</operation>
+	</file>
+	<file name="catalog/controller/product/product.php">
+		<operation error="skip">
+			<search position="after"><![CDATA[$data['description']]]></search>
+			<add><![CDATA[
+			$this->load->model('catalog/cisizechart');
+			$data['sizecharts'] = $this->model_catalog_cisizechart->getCiSizeCharts($product_info['product_id']);
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation error="skip">
+			<search position="after"><![CDATA[<a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>]]></search>
+			<add><![CDATA[
+			<!-- Ci Size Chart Starts -->
+            <?php if(!empty($sizecharts)) { ?>
+            <?php foreach($sizecharts as $sizechart) { ?>
+            <?php if($sizechart['display_layout'] == 'tab') { ?>
+            <li><a href="#tab-cisizechart-<?php echo $sizechart['cisizechart_id']; ?>" data-toggle="tab"><?php echo $sizechart['tab_text']; ?></a></li>
+            <?php } ?>
+            <?php } ?>
+            <?php } ?>
+            <!-- Ci Size Chart Ends -->
+			]]></add>
+		</operation>
+		<operation error="skip">
+			<search position="after"><![CDATA[<div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>]]></search>
+			<add><![CDATA[
+			<!-- Ci Size Chart Starts -->
+            <?php if(!empty($sizecharts)) { ?>
+            <?php foreach($sizecharts as $sizechart) { ?>
+            <?php if($sizechart['display_layout'] == 'tab') { ?>
+            <div class="tab-pane" id="tab-cisizechart-<?php echo $sizechart['cisizechart_id']; ?>"><?php echo $sizechart['description']; ?></div>
+            <?php } ?>
+            <?php } ?>
+            <?php } ?>
+            <!-- Ci Size Chart Ends -->
+			]]></add>
+		</operation>
+		<operation error="skip">
+			<search position="before"><![CDATA[<?php if ($recurrings) { ?>]]></search>
+			<add><![CDATA[
+			<!-- Ci Size Chart Starts -->
+            <?php if(!empty($sizecharts)) { ?>
+            <div class="sizechart-buttons">
+            <?php foreach($sizecharts as $sizechart) { ?>
+            <?php if($sizechart['display_layout'] == 'popup') { ?>
+            <?php if($sizechart['popup_type'] == 'icon') { ?>
+            <div class="sizechart-button"><a href="<?php echo $sizechart['popup_href']; ?>"><img src="<?php echo $sizechart['icon']; ?>" /></a></div>
+            <?php } else { ?>
+            <div class="sizechart-button"><a href="<?php echo $sizechart['popup_href']; ?>" class="btn btn-primary btn-sm button"><?php echo $sizechart['button']; ?></a></div>
+            <?php } ?>
+            <?php } ?>
+            <?php } ?>
+            <br>
+            </div>
+            <?php } ?>
+            <!-- Ci Size Chart Ends -->
+			]]></add>
+		</operation>
+		<operation error="skip">
+			<search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+			<add><![CDATA[
+<script type="text/javascript"><!--
+$(document).delegate('.sizechart-button a', 'click', function(e) {
+  e.preventDefault();
+
+  $('#modal-cisizechart').remove();
+
+  var element = this;
+
+  $.ajax({
+    url: $(element).attr('href'),
+    type: 'get',
+    dataType: 'json',
+    beforeSend: function() {
+	    if($(element).hasClass('button')) {
+	      $(element).button('loading');
+	    }
+    },
+    complete: function() {
+    	if($(element).hasClass('button')) {
+      		$(element).button('reset');
+      	}
+    },
+    success: function(json) {
+      html  = '<div id="modal-cisizechart" class="modal">';
+      html += '  <div class="modal-dialog">';
+      html += '    <div class="modal-content">';
+
+      if(json['title']) {
+        html += '      <div class="modal-header">';
+        html += '        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+        html += '        <h4 class="modal-title">' + json['title'] + '</h4>';
+        html += '      </div>';
+      }
+
+      if(json['description']) {
+        html += '      <div class="modal-body">' + json['description'] + '</div>';
+      }
+      html += '    </div';
+      html += '  </div>';
+      html += '</div>';
+
+      $('body').append(html);
+
+      $('#modal-cisizechart').modal('show');
+    }
+  });
+});
+//--></script>
+			]]></add>
+		</operation>
+	</file>
+</modification>

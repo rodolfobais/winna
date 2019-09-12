@@ -1,0 +1,163 @@
+{{ header }}{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+        <button type="submit" form="form-contabilium" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
+        <a href="{{ cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
+      <h1>{{ heading_title }}</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb['href'] }}">{{ breadcrumb['text'] }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    {% if error_warning %}
+    <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-cogs"></i> {{ heading_title }}</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">{{ placeholder }}</div>
+          <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-contabilium" class="form-horizontal">
+            <div class="form-group">
+              <label for="contabiliumUsuario">{{ text_active }}</label>
+              <br/>
+              <div class="btn-group" id="active" data-toggle="buttons">
+                <label class="btn btn-default btn-on btn-xs {% if module_contabilium_active[0] == 1 %}active{% endif %}">
+                <input type="radio" value="1" name="module_contabilium_active[]" {% if module_contabilium_active[0] == 1 %} checked="checked"{% endif %}>{{ text_on }}</label>
+                <label class="btn btn-default btn-off btn-xs {% if module_contabilium_active[0] == 0 %}active{% endif %}">
+                <input type="radio" value="0" name="module_contabilium_active[]" {% if module_contabilium_active[0] == 0 %} checked="checked"{% endif %}>{{ text_off }}</label>
+              </div>
+              {{ text_active_description }}
+            </div>
+            <div class="form-group {% if module_contabilium_email %} has-success {% endif %}">
+              <label for="contabiliumUsuario">{{ text_email }}</label>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                <input id="contabiliumUsuario" type="email" class="form-control" name="module_contabilium_email" placeholder="Email" value="{{ module_contabilium_email }}">
+                {% if error_email %}
+                  <div class="text-danger sr-only">{{ error_email }}</div>
+                {% endif %}
+              </div>
+              {% if error_email %}
+                <div class="text-danger">{{ error_email }}</div>
+              {% endif %}
+            </div>
+            <div class="form-group {% if module_contabilium_apikey %} has-success {% endif %}">
+              <label for="contabiliumApiKey">{{ text_apikey }}</label>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="fa fa-key"></span></span>
+                <input id="contabiliumApiKey" type="text" class="form-control" name="module_contabilium_apikey" placeholder="9999999999999" value="{{ module_contabilium_apikey }}">
+                {% if error_apikey %}
+                  <div class="text-danger sr-only">{{ error_apikey }}</div>
+                {% endif %}
+              </div>
+              {% if error_apikey %}
+                <div class="text-danger">{{ error_apikey }}</div>
+              {% endif %}
+            </div>
+            <div class="form-group {% if module_contabilium_id %} has-success {% endif %}">
+              <label for="contabiliumId">{{ text_id }}</label>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="fa fa-hashtag"></span></span>
+                <input id="contabiliumId" type="text" class="form-control" name="module_contabilium_id" placeholder="9999999999999" value="{{ module_contabilium_id }}">
+                {% if error_id %}
+                  <div class="text-danger sr-only">{{ error_id }}</div>
+                {% endif %}
+              </div>
+              {% if error_id %}
+                <div class="text-danger">{{ error_id }}</div>
+              {% endif %}
+            </div>
+            <div class="row"><label for="contabiliumSinc">{{ text_sinc }}</label></div>
+            <div class="form-group">
+              <div class="btn-group" id="prices" data-toggle="buttons">
+                <label class="btn btn-default btn-on btn-xs {% if module_contabilium_prices[0] == 1 %}active{% endif %}">
+                
+                <input type="radio" value="1" name="module_contabilium_prices[]" {% if module_contabilium_prices[0] == 1 %} checked="checked"{% endif %}>{{ text_on }}</label>
+                <label class="btn btn-default btn-off btn-xs {% if module_contabilium_prices[0] == 0 %}active{% endif %}">
+                <input type="radio" value="0" name="module_contabilium_prices[]" {% if module_contabilium_prices[0] == 0 %} checked="checked"{% endif %}>{{ text_off }}</label>
+              </div>
+              {{ text_prices }}
+            </div>
+            <div class="form-group">
+              <div class="btn-group" id="stock" data-toggle="buttons">
+                <label class="btn btn-default btn-on btn-xs {% if module_contabilium_stock[0] == 1 %}active{% endif %}">
+                <input type="radio" value="1" name="module_contabilium_stock[]" {% if module_contabilium_stock[0] == 1 %} checked="checked"{% endif %}>{{ text_on }}</label>
+                <label class="btn btn-default btn-off btn-xs {% if module_contabilium_stock[0] == 0 %}active{% endif %}">
+                <input type="radio" value="0" name="module_contabilium_stock[]" {% if module_contabilium_stock[0] == 0 %} checked="checked"{% endif %}>{{ text_off }}</label>
+              </div>
+              {{ text_stock }}
+            </div>
+            <div class="form-group {% if module_contabilium_accepted %} has-success {% endif %} {% if error_accepted %} has-error {% endif %}">
+              <label for="accepted">{{ text_order_accepted }}</label>
+              <select class="form-control" id="accepted" name="module_contabilium_accepted[]" multiple>
+                <option value=""></option>
+                {% for status in orderstatus %}
+                <option value="{{ status["order_status_id"] }}" {% if status["order_status_id"] in module_contabilium_accepted %} selected="selected" {% endif %}>{{ status["name"] }}</option>
+                {% endfor %}
+              </select>
+              {% if error_accepted %}
+                <div class="text-danger">{{ error_accepted }}</div>
+              {% endif %}
+            </div> 
+            <div class="form-group {% if module_contabilium_canceled %} has-success {% endif %} {% if error_canceled %} has-error {% endif %}">
+              <label for="canceled">{{ text_order_canceled }}</label>
+              <select class="form-control" id="canceled" name="module_contabilium_canceled[]" multiple>
+                <option value=""></option>
+                {% for status in orderstatus %}
+                <option value="{{ status["order_status_id"] }}" {% if status["order_status_id"] in module_contabilium_canceled %} selected="selected" {% endif %}>{{ status["name"] }}</option>
+                {% endfor %}
+              </select>
+              {% if error_canceled %}
+                <div class="text-danger">{{ error_canceled }}</div>
+              {% endif %}
+            </div> 
+            <hr />
+            <div class="alert alert-info">
+              <strong>{{ text_callback }}:</strong></br>
+              {{ contabilium_callback }}
+              <hr/>
+              <strong>{{ text_status }}:</strong>
+              <br/>
+              <span class="label {{ contabilium_online }} m-1">{{ online_text }}</span>
+              <hr/>
+              {% if module_contabilium_skuoption %}
+              <strong>{{ text_modulo_ok }}:</strong>  
+              <br/>
+              <span class="label label-success m-1">OK</span>
+              <hr/>
+              {% endif %}
+              <strong>{{ text_log }}:</strong>  
+              <br/>
+              <a href="{{ contabilium_log }}" class="btn btn-default m-1">{{ text_log_btn }}</a>
+            </div>
+            {% if not module_contabilium_skuoption %}
+            <div class="alert alert-warning">
+              {{ text_modulo }} <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32704&filter_search=Different%20SKU%20for%20each%20Option" target="_blank">Product Option SKU</a>
+            </div>
+            {% endif %}
+            <input type="hidden" name="module_contabilium_token" value="{{ module_contabilium_token }}" />
+            <input type="hidden" name="module_contabilium_status" value="{{ module_contabilium_status }}" />
+            <input type="hidden" name="module_contabilium_error" value="{{ module_contabilium_error }}" />
+            <input type="hidden" name="module_contabilium_skuoption" value="{{ module_contabilium_skuoption }}" />
+          </form>
+          
+        </div>
+      </div>
+      <div class="panel-footer text-right">
+        <div id="contabilium_alert" class="alert pull-left alert-default"></div>
+        <button class="btn btn-success ladda-button update {% if contabilium_nosync %}disabled{% endif %}" data-color="green" data-size="s" data-style="expand-right" data-link="{{ contabilium_update }}" {% if contabilium_nosync %}disabled{% endif %}><span class="ladda-label">{{ text_update }}</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+{{ footer }}

@@ -1,0 +1,24 @@
+<modification>
+	<name>CodeManager by iSenseLabs</name>
+	<version>2.2.6</version>
+	<link>http://isenselabs.com</link>
+	<author>iSenseLabs</author>
+	<code>isenselabs_codemanager</code>
+
+	<file path="admin/controller/common/column_left.php">
+		<operation>
+			<search><![CDATA[if ($this->user->hasPermission('access', 'tool/log')) {]]></search>
+			<add position="before"><![CDATA[
+				$this->load->config('isenselabs/codemanager');
+				$this->language->load($this->config->get('codemanager_path'));
+				if ($this->user->hasPermission('access', $this->config->get('codemanager_path'))) {
+				$tool[] = array(
+					'name'	   => $this->language->get('menu_title'),
+					'href'     => $this->url->link($this->config->get('codemanager_path'), 'token=' . $this->session->data['token'], true),
+					'children' => array()		
+				);
+			}
+			]]></add>
+		</operation>
+	</file> 
+</modification>

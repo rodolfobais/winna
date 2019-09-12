@@ -1,0 +1,15 @@
+---------- Date: 2019-08-04 20:12:10 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/installer&token=Pc9Qt2dG2yBvPsUNoAzqpsYcTifW7xf9
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+

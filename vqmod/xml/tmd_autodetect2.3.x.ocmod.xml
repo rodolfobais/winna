@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>TMD Auto Detect</name>
+	<id>TMD Auto Detect</id>
+	<code>TMD Auto Detect</code>
+	<version>1.0.0</version>
+	<author>TMD(opencartextensions.in)</author>
+
+	<file path="catalog/controller/startup/startup.php">
+		<operation error="log">
+			<search><![CDATA[if (isset($this->session->data['language'])) {]]></search>
+			<add position="before"><![CDATA[
+			if (empty($this->session->data['language'])) {
+		$ip_address = $this->request->server['REMOTE_ADDR'];
+		//$ip_address='103.60.102.82';
+		$geopluginURL='http://www.geoplugin.net/php.gp?ip='.$ip_address;
+		$addrDetailsArr = unserialize(file_get_contents($geopluginURL));
+		
+		$city = $addrDetailsArr['geoplugin_city'];
+		
+		$country = $addrDetailsArr['geoplugin_countryName'];
+		$country_code = $addrDetailsArr['geoplugin_countryCode'];
+	
+		if(!$city){
+		   $city='Not Define';
+		}if(!$country){
+		   $country='Not Define';
+		}
+		if(!$country_code){
+		   $country_code='Not Define';
+		}
+		
+		//echo '<strong>Country</strong>:- '.$country_code.'<br/>';
+		
+		$this->load->model('localisation/startup');
+
+		
+		$country_info=$this->model_localisation_startup->getCountrycode($country_code);
+		
+		$data['autodetect_values'] = $this->config->get('autodetect_value');
+		//print_r($data['autodetect_values']);
+			$autodetect_value = array();
+			
+			foreach ($data['autodetect_values'] as $result) {
+			$currency_info=$this->model_localisation_startup->getcurrencycode($result['currency_id']);
+			
+			$language_info=$this->model_localisation_startup->getlanguagecode($result['language_id']);
+				
+				$languagecode=$language_info['code'];
+				$currencycode=$currency_info['code'];
+			
+
+				$data['autodetect_value'][$result['country_id']] = array(
+					'languagecode' 		=>$languagecode,
+					'currencycode' 		 =>$currencycode
+				);
+		}	
+			
+		if(isset($data['autodetect_value'][$country_info['country_id']]))
+		{
+			
+			$this->session->data['language']= $data['autodetect_value'][$country_info['country_id']]['languagecode'];
+			$this->session->data['currency']= $data['autodetect_value'][$country_info['country_id']]['currencycode'];
+		}
+	}]]></add>
+		</operation>
+	</file>
+</modification>

@@ -1,0 +1,80 @@
+.hide-field {
+    display: none !important; 
+    visibility: hidden !important;
+}
+.size-color input[type="radio"] + label,
+.size-color input[type="checkbox"] + label {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F5F5F5;
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: -2px -2px 0;
+    padding: 4px 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    font-weight: bold;
+}
+.size-color input[type="radio"]:checked + label,
+.size-color input[type="checkbox"]:checked + label {
+    background-color: #666666;
+    background-image: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: 0 none;
+    color:#000000;
+}
+
+.boxselect, .boximage{cursor:pointer;}
+.img-thumbnail.selected {
+    border: 2px solid #666666;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+ul.size-color-select {
+    list-style: none;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+}
+ul.size-color-select li {
+     -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F5F5F5;
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: -2px -2px 0;
+    padding: 4px 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+ul.size-color-select li.selected {
+    background-color: #666666;
+    background-image: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: 0 none;
+    color:#000000;
+}

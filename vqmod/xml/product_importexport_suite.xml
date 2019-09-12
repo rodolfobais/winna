@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Product Import Export Suite (FREE)</id>
+	<version>1.0</version>
+	<vqmver required="true">2.6.0</vqmver>
+	<author>Module Points</author>
+	<file name="admin/language/*/common/column_left.php">
+		<operation error="log">
+			<search position="after"><![CDATA[// Text]]></search>
+			<add><![CDATA[
+				/* mps */
+				$_['text_product_importer']								 = 'Product Import Suite';
+				$_['text_product_exporter']								 = 'Product Export Suite';
+				/* mpe */
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/*/common/menu.php">
+		<operation error="log">
+			<search position="after"><![CDATA[// Text]]></search>
+			<add><![CDATA[
+				/* mps */
+				$_['text_product_importer']								 = 'Product Import Suite';
+				$_['text_product_exporter']								 = 'Product Export Suite';
+				/* mpe */
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/common/column_left.php">
+		<operation error="log">
+			<search position="before"><![CDATA[if ($this->user->hasPermission('access', 'tool/backup')) {]]></search>
+			<add><![CDATA[
+			/* mps */
+			if ($this->user->hasPermission('access', 'importer/product')) {
+				$tool[] = array(
+					'name'	   => $this->language->get('text_product_importer'),
+					'href'     => $this->url->link('importer/product', 'token=' . $this->session->data['token'], true),
+					'children' => array()		
+				);	
+			}
+			
+			if ($this->user->hasPermission('access', 'exporter/product')) {
+				$tool[] = array(
+					'name'	   => $this->language->get('text_product_exporter'),
+					'href'     => $this->url->link('exporter/product', 'token=' . $this->session->data['token'], true),
+					'children' => array()		
+				);	
+			}
+			/* mpe */
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/common/menu.php">
+		<operation error="log">
+			<search position="before"><![CDATA[$data['home']]]></search>
+			<add><![CDATA[
+				/* mps */
+				$data['text_product_exporter'] = $this->language->get('text_product_exporter');
+				$data['text_product_importer'] = $this->language->get('text_product_importer');
+				$data['product_importer'] = $this->url->link('importer/product', 'token=' . $this->session->data['token'], 'SSL');
+				$data['product_exporter'] = $this->url->link('exporter/product', 'token=' . $this->session->data['token'], 'SSL');
+				/* mpe */
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/common/menu.tpl">
+		<operation error="log">
+			<search position="after"><![CDATA[<li><a href="<?php echo $upload; ?>"><?php echo $text_upload; ?></a></li>]]></search>
+			<add><![CDATA[
+			<?php /* mps */ ?>
+			<li><a href="<?php echo $product_importer; ?>"><?php echo $text_product_importer; ?></a></li>
+			<li><a href="<?php echo $product_exporter; ?>"><?php echo $text_product_exporter; ?></a></li>
+			<?php /* mpe */ ?>
+			]]></add>
+		</operation>
+	</file>
+</modification>

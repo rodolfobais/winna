@@ -1,0 +1,69 @@
+2019-07-27 5:09:14 - DNI FIELD ID 3
+2019-07-27 5:09:14 - Modulo Contabilium instalado
+2019-08-15 12:38:03 - Modulo Contabilium desinstalado
+2019-08-15 12:50:38 - Modulo Contabilium instalado
+2019-08-15 13:11:08 - Modulo Contabilium desinstalado
+2019-08-15 13:11:13 - Modulo Contabilium instalado
+2019-08-15 14:00:20 - Modulo Contabilium desinstalado
+2019-08-15 14:00:24 - Modulo Contabilium instalado
+2019-08-15 14:20:39 - Modulo Contabilium desinstalado
+2019-08-15 14:20:44 - Modulo Contabilium instalado
+2019-08-15 14:32:26 - Modulo Contabilium desinstalado
+2019-08-15 14:32:31 - Modulo Contabilium instalado
+2019-08-23 16:27:19 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:29:29 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:30:58 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:31:46 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:32:21 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:33:00 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:33:06 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:33:46 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:34:41 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:34:47 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:41:35 - Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'oo.order_product_id WHERE oo.order_id = 2524 AND op.product_id = 3731' at line 1<br />Error No: 1064<br />SELECT op.product_option_value_id FROM oc_order_option oo INNER JOIN oc_order_product op ON op.order_product_id oo.order_product_id WHERE oo.order_id = 2524 AND op.product_id = 3731
+2019-08-23 16:41:49 - Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'oo.order_product_id WHERE oo.order_id = 2524 AND op.product_id = 3731' at line 1<br />Error No: 1064<br />SELECT op.product_option_value_id FROM oc_order_option oo INNER JOIN oc_order_product op ON op.order_product_id oo.order_product_id WHERE oo.order_id = 2524 AND op.product_id = 3731
+2019-08-23 16:42:24 - Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'oo.order_product_id WHERE oo.order_id = 2524 AND op.product_id = 3731' at line 1<br />Error No: 1064<br />SELECT op.product_option_value_id FROM oc_order_option oo INNER JOIN oc_order_product op ON op.order_product_id oo.order_product_id WHERE oo.order_id = 2524 AND op.product_id = 3731
+2019-08-23 16:43:15 - Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'oo.order_product_id WHERE oo.order_id = 2524 AND op.product_id = 3731' at line 1<br />Error No: 1064<br />SELECT op.product_option_value_id FROM oc_order_option oo INNER JOIN oc_order_product op ON op.order_product_id oo.order_product_id WHERE oo.order_id = 2524 AND op.product_id = 3731
+2019-08-23 16:46:23 - Error: Unknown column 'Array' in 'where clause'<br />Error No: 1054<br />SELECT s.combination_id, s.sku FROM oc_stock s INNER JOIN oc_stock_option so ON so.combination_id = s.combination_id WHERE s.store_id = 0 AND s.product_id = 3731 AND so.product_option_value_id IN (Array,Array)
+2019-08-23 16:47:36 - Error: Unknown column 'Array' in 'where clause'<br />Error No: 1054<br />SELECT s.combination_id, s.sku FROM oc_stock s INNER JOIN oc_stock_option so ON so.combination_id = s.combination_id WHERE s.store_id = 0 AND s.product_id = 3731 AND so.product_option_value_id IN (Array,Array)
+2019-08-23 16:48:49 - Error: Unknown column 'Array' in 'where clause'<br />Error No: 1054<br />SELECT s.combination_id, s.sku FROM oc_stock s INNER JOIN oc_stock_option so ON so.combination_id = s.combination_id WHERE s.store_id = 0 AND s.product_id = 3731 AND so.product_option_value_id IN (Array,Array)
+2019-08-23 16:52:28 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:54:31 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:55:41 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 16:58:22 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:00:40 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:03:14 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:04:06 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:04:13 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:04:51 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:05:45 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:05:50 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:05:54 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:15 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:19 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:22 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:26 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:29 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:33 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:36 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:39 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:42 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:06:48 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:08:27 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:09:15 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:10:03 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:11:35 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:11:36 - Couldn't resolve host '-1'
+2019-08-23 17:12:49 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:12:49 - Couldn't resolve host '-1'
+2019-08-23 17:14:13 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:14:13 - Couldn't resolve host '-1'
+2019-08-23 17:15:34 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:15:34 - Couldn't resolve host '-1'
+2019-08-23 17:16:22 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:16:22 - Couldn't resolve host '-1'
+2019-08-23 17:16:27 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:16:27 - Couldn't resolve host '-1'
+2019-08-23 17:16:33 - Procesar la orden: 2524 estado:Aceptado
+2019-08-23 17:16:33 - Couldn't resolve host '-1'
+2019-08-23 17:16:39 - Procesar la orden: 2524 estado:Aceptado

@@ -1,0 +1,489 @@
+---------- Date: 2019-09-10 00:12:21 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/installer&token=oBvPxeZDWO52zhdFWOHRZbpXZjwxF8Lj
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 00:32:18 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/modification&token=oBvPxeZDWO52zhdFWOHRZbpXZjwxF8Lj
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/product_importexport_suite.xml
+   id        : Product Import Export Suite (FREE)
+   version   : 1.0
+   vqmver    : 2.6.0
+   author    : Module Points
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/menu.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/menu.tpl] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/sizechart_codinginspect.xml
+   id        : Product Size Chart
+   version   : 1.0
+   vqmver    : 
+   author    : Coding Inspect
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/menu.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/menu.tpl] (SKIPPED)
+
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/default/template/product/product.twig] (SKIPPED)
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : admin/controller/extension/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): $this->db->query("INSERT INTO " . DB_PREFIX . "product_image SET product_id = '" . (int)$product_id . "', image = '" . $this->db->escape($product_image['image']) . "', sort_order = '" . (int)$product_image['sort_order'] . "'");
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/template/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 00:32:29 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/event&token=oBvPxeZDWO52zhdFWOHRZbpXZjwxF8Lj
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 00:33:52 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=catalog/cisizechart/add&token=oBvPxeZDWO52zhdFWOHRZbpXZjwxF8Lj
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 00:45:34 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : catalog/controller/event/theme.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : catalog/controller/event/theme.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 00:49:09 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/extension&token=oBvPxeZDWO52zhdFWOHRZbpXZjwxF8Lj
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 14:34:17 ~ IP : 186.4.111.100 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/installer&token=3SCEz8rWGQAMzEXDWs835rjTSBes3QXM
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 17:42:54 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=user/user_permission&token=cVvbPReTza1MZn6jdQ1acR5zWyGZOzRm
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/mpcheckout.xml
+   id        : Quick Checkout By ModulePoints
+   version   : 2x
+   vqmver    : 2.6.0
+   author    : ModulePoints
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/menu.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/menu.tpl] (SKIPPED)
+
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/product_importexport_suite.xml
+   id        : Product Import Export Suite (FREE)
+   version   : 1.0
+   vqmver    : 2.6.0
+   author    : Module Points
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/menu.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/menu.tpl] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/sizechart_codinginspect.xml
+   id        : Product Size Chart
+   version   : 1.0
+   vqmver    : 
+   author    : Coding Inspect
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/menu.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/menu.tpl] (SKIPPED)
+
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/catalog/product_form.twig] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/default/template/product/product.twig] (SKIPPED)
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/engine/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/engine/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): $this->db->query("INSERT INTO " . DB_PREFIX . "product_image SET product_id = '" . (int)$product_id . "', image = '" . $this->db->escape($product_image['image']) . "', sort_order = '" . (int)$product_image['sort_order'] . "'");
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+File Name    : system/library/template/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 17:43:04 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=extension/extension&token=cVvbPReTza1MZn6jdQ1acR5zWyGZOzRm
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : admin/controller/extension/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : admin/controller/extension/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 18:09:49 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/index.php?route=product/product&product_id=3693
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : catalog/controller/event/theme.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : catalog/controller/event/theme.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-09-10 23:31:03 ~ IP : 152.168.78.99 ----------
+REQUEST URI : /edit/admin/index.php?route=common/filemanager&token=ILk9vjIeuhxk2iE8SVTv46NNU0UhuHYL&directory=BANNERS%2Ftalles
+MOD DETAILS:
+   modFile   : /home/a6000574/public_html/edit/vqmod/xml/vqmod_opencart.xml
+   id        : VQMOD CORE FOR OPENCART - DO NOT REMOVE
+   version   : 1.4.1 and above
+   vqmver    : 2.6.0
+   author    : vqmod.com
+
+File Name    : system/library/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~
+
+File Name    : system/library/*.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~
+
+----------------------------------------------------------------------
+
+

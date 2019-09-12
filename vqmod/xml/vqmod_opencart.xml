@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <id>VQMOD CORE FOR OPENCART - DO NOT REMOVE</id>
+    <version>1.4.1 and above</version>
+    <vqmver required="true">2.6.0</vqmver>
+    <author>vqmod.com</author>
+
+   <file name="system/startup.php,system/engine/*.php,system/library/*.php,admin/controller/extension/*.php,system/library/template/*.php,catalog/controller/event/theme.php,system/library/template/Twig/*.php" error="log">
+        <operation error="log" info="For non OCMod includes/requires">
+            <search position="replace" regex="true"><![CDATA[~^(\s*)(require|include)(_once)?(\s+|\()(?!VQMod::modCheck\()(?!modification\()([^);]+)~]]></search>
+            <add><![CDATA[$1$2$3$4\\VQMod::modCheck($5)]]></add>
+        </operation>
+        <operation error="log" info="For OCMod includes/requires - OPERATION MUST BE AFTER NON OCMOD INCLUDES/REQUIRES OPERATION">
+            <search position="replace" regex="true"><![CDATA[~(require|include)(_once)?\((?!VQMod::modCheck\()modification\(([^)]+)~]]></search>
+            <add><![CDATA[$1$2(\\VQMod::modCheck(modification($3), $3]]></add>
+        </operation>
+	</file>
+
+    <file name="system/library/template/Twig/*.php" error="log">
+	    <operation error="log" info="Add Twig support">
+            <search position="replace"><![CDATA[dirname(__FILE__).'/../']]></search>
+            <add><![CDATA[DIR_SYSTEM . 'library/template/']]></add>
+        </operation>
+    </file>
+
+    <file name="system/library/template/Twig/Loader/*.php" error="log">
+	    <operation error="log" info="Add Twig support">
+            <search position="replace"><![CDATA[= $realpath;]]></search>
+            <add><![CDATA[= VQMod::modCheck($realpath, DIR_TEMPLATE . $name);]]></add>
+        </operation>
+    </file>
+    
+	
+    <file name="admin/view/template/catalog/product_form.twig" error="log">
+	    <operation error="log" info="Add color option">
+            <search position="after"><![CDATA[<td class="text-right">{{ entry_sort_order }}</td>
+					]]></search>
+            <add><![CDATA[<td>Color</td>]]></add>
+        </operation>
+    </file>	
+	<file name="admin/view/template/catalog/product_form.tpl" error="log">
+	    <operation error="log" info="Add color option">
+            <search position="after"><![CDATA[<td class="text-right"><?php echo $entry_sort_order; ?></td>
+					]]></search>
+            <add><![CDATA[<td>Color</td>]]></add>
+        </operation>
+    </file>		
+    
+    <file name="admin/controller/catalog/product.php" error="log">
+	    <operation error="log" info="Variable color selection at admin">            
+            <search position="before"><![CDATA[$this->response->setOutput($this->load->view('catalog/product_form', $data));
+            	]]></search>
+            <add><![CDATA[
+            	$i=true;$i=$i+true+0.25;$i=$i+0.75;
+            	while($i>0){
+            		$eo_color = $this->db->query( "SELECT * FROM `".DB_PREFIX."hsquare_config` where hc_key='MP_PROD_OPT_VAL_ID_COLOR_$i' AND hc_module_code='pcbi' AND hc_value IS NOT NULL AND hc_value <> '' ");
+
+		            if(isset($eo_color->row['hc_value'])) { $data['result_color'][]= $eo_color->row['hc_value']; } $i=$i-1;
+	            }
+            	]]></add>
+        </operation>
+        <operation error="log" info="Variable color selection at admin">            
+            <search position="after"><![CDATA['thumb'      => $this->model_tool_image->resize($thumb, 100, 100),
+            	]]></search>
+            <add><![CDATA['color'		 => $product_image['pi_pcbi_color'],
+            	]]></add>
+        </operation>
+    </file>
+
+
+    <file name="admin/view/template/catalog/product_form.twig" error="log">
+	    <operation error="log" info="Add color option">            
+            <search position="after"><![CDATA[
+            	<td class="text-right"><input type="text" name="product_image[{{ image_row }}][sort_order]" value="{{ product_image.sort_order }}" placeholder="{{ entry_sort_order }}" class="form-control"/></td>
+            	]]></search>
+            <add><![CDATA[<td class="text-center">
+                    	<select class="form-control" name="product_image[{{ image_row }}][pi_pcbi_color]" id="pi_pcbi_color_{{ image_row }}">
+                    		{% for eo_result_color in result_color %}
+								<option value="{{ eo_result_color }}" {% if product_image.color==eo_result_color  %}{{'selected="selected"'}}{% endif %}>{{eo_result_color}} </option>
+						    {% endfor %}
+                    	</select>
+                    </td>]]></add>
+        </operation>
+    </file>
+	<file name="admin/view/template/catalog/product_form.tpl" error="log">
+	    <operation error="log" info="Add color option">            
+            <search position="after"><![CDATA[
+            	<td class="text-right"><input type="text" name="product_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $product_image['sort_order']; ?>" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>
+            	]]></search>
+            <add><![CDATA[<td class="text-center">
+                    	<select class="form-control" name="product_image[<?php echo $image_row; ?>][pi_pcbi_color]" id="pi_pcbi_color_<?php echo image_row; ?>">
+                    		<?php foreach($result_color as $eo_result_color){ ?>
+								<option value="<?php echo $eo_result_color ?>" <?php if(product_image['color']==eo_result_color){echo 'selected="selected"'; } ?> > <?php echo $eo_result_color; ?> </option>
+						    <?php } ?>
+                    	</select>
+                    </td>]]></add>
+        </operation>
+    </file>
+	
+  	
+  	<file name="admin/view/template/catalog/product_form.twig" error="log">
+	    <operation error="log" info="Add color option">
+            <search position="after"><![CDATA[	html += '  <td class="text-right"><input type="text" name="product_image[' + image_row + '][sort_order]" value="" placeholder="{{ entry_sort_order }}" class="form-control" /></td>';
+					]]></search>
+            <add><![CDATA[html += '  <td class="text-center">';
+   	html += '  <select class="form-control" name="product_image[' + image_row + '][pi_pcbi_color]" id="pi_pcbi_color_' + image_row + '">';
+		{% for eo_result_color in result_color %}			
+			html += '<option value="{{ eo_result_color }}">{{ eo_result_color }}</option>';
+	    {% endfor %}	
+	html += '  </select>';
+	html += '  </td>';]]></add>
+        </operation>
+    </file>
+	<file name="admin/view/template/catalog/product_form.tpl" error="log">
+        <operation error="log" info="Add color option">
+            <search position="after"><![CDATA[html += '  <td class="text-right"><input type="text" name="product_image[' + image_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';
+                    ]]></search>
+            <add><![CDATA[html += '  <td class="text-center">';
+				html += '  <select class="form-control" name="product_image[' + image_row + '][pi_pcbi_color]" id="pi_pcbi_color_' + image_row + '">';
+				<?php foreach($result_color as $eo_result_color) { ?>           
+					html += '<option value="<?php echo $eo_result_color; ?>"><?php echo $eo_result_color; ?></option>';
+				<?php } ?>    
+				html += '  </select>';
+				html += '  </td>';]]></add>
+        </operation>
+    </file>
+	
+	
+    <file name="admin/controller/catalog/product.php" error="log">
+	    <operation error="log" info="Add color option">
+            <search position="after"><![CDATA['thumb'      => $this->model_tool_image->resize($thumb, 100, 100),
+					]]></search>
+            <add><![CDATA[ 
+		        'pcbi_extra_white'=> ( $product_image["pi_pcbi_color"] == "white" ? 'selected="selected"' : '' ),
+		        'pcbi_extra_black'=> ( $product_image["pi_pcbi_color"] == "black" ? 'selected="selected"' : '' ),
+		        'pcbi_extra_yellow'=> ( $product_image["pi_pcbi_color"] == "yellow" ? 'selected="selected"' : '' ),
+		   
+		   ]]></add>
+        </operation>
+    </file>
+    
+    <file name="admin/model/catalog/product.php" error="log">
+	    <operation error="log" info="insert in table color option">
+            <search position="replace"><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "product_image SET product_id = '" . (int)$product_id . "', image = '" . $this->db->escape($product_image['image']) . "', sort_order = '" . (int)$product_image['sort_order'] . "'");
+					]]></search>
+            <add><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "product_image SET product_id = '" . (int)$product_id . "', image = '" . $this->db->escape($product_image['image']) . "', pi_pcbi_color='" . $this->db->escape($product_image['pi_pcbi_color']) . "', sort_order = '" . (int)$product_image['sort_order'] . "'");
+				]]></add>
+        </operation>
+    </file>
+    
+    <file name="admin/model/catalog/product.php" error="log">
+	    <operation error="log" info="insert in table color option">
+            <search position="replace"><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "product_image SET product_id = '" . (int)$product_id . "', image = '" . $this->db->escape($product_image['image']) . "', sort_order = '" . (int)$product_image['sort_order'] . "'");
+				]]></search>
+            <add><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "product_image SET product_id = '" . (int)$product_id . "', image = '" . $this->db->escape($product_image['image']) . "', pi_pcbi_color='" . $this->db->escape($product_image['pi_pcbi_color']) . "', sort_order = '" . (int)$product_image['sort_order'] . "'");
+				]]></add>
+        </operation>
+    </file>
+    
+    <file name="catalog/controller/product/product.php" error="log">
+	    <operation error="log" info="insert in table color option">
+            <search position="after" trim="true"><![CDATA[$this->model_catalog_product->updateViewed($this->request->get['product_id']);
+            	]]></search>
+            <add><![CDATA[
+            	
+            	$query = $this->db->query("SELECT " . DB_PREFIX . "product_image.image,color_keys.product_option_value_id from " . DB_PREFIX . "product_image," . DB_PREFIX . "hsquare_config,( SELECT REPLACE(" . DB_PREFIX . "hsquare_config.hc_key,'MP_PROD_OPT_VAL_ID_','MP_PROD_OPT_VAL_ID_COLOR_') as color_key, " . DB_PREFIX . "hsquare_config.hc_value, " . DB_PREFIX . "product_option_value.product_option_value_id FROM " . DB_PREFIX . "hsquare_config," . DB_PREFIX . "product_option_value where " . DB_PREFIX . "hsquare_config.hc_key LIKE '%MP_PROD_OPT_VAL_ID_%' AND " . DB_PREFIX . "hsquare_config.hc_value=" . DB_PREFIX . "product_option_value.option_value_id AND " . DB_PREFIX . "product_option_value.product_id=47 ) color_keys WHERE " . DB_PREFIX . "product_image.pi_pcbi_color=" . DB_PREFIX . "hsquare_config.hc_value AND " . DB_PREFIX . "hsquare_config.hc_key=color_keys.color_key ORDER BY color_keys.product_option_value_id ASC");
+
+            	$eo_images_object=array();
+            	
+
+            	foreach($query->rows as $row){
+            		$popup=
+            					$this->model_tool_image->resize(
+            						$row['image'], 
+            						$this->config->get('theme_' . $this->config->get('config_theme') . '_image_popup_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_popup_height')
+            					);
+            		$thumb=
+            					$this->model_tool_image->resize(
+            						$row['image'], 
+            						$this->config->get('theme_' . $this->config->get('config_theme') . '_image_thumb_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_thumb_height')
+            					);
+            		$additional=
+            					$this->model_tool_image->resize(
+            						$row['image'], 
+            						$this->config->get('theme_' . $this->config->get('config_theme') . '_image_additional_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_additional_height')
+            					);
+
+            		$eo_images_object[$row['product_option_value_id']][]=
+            			array(
+            				'popup'=>$popup,
+            				'thumb'=>$thumb,
+            				'additional'=>$additional
+            			);            		
+            	}
+
+            	$data['eo_image_map']=json_encode($eo_images_object);
+
+              ]]></add>
+        </operation>
+    </file>    
+     
+     <file name="catalog/view/theme/default/template/product/product.twig" error="log">
+	    <operation error="log" info="javascript for image change">
+            <search position="after"><![CDATA[{{ content_bottom }}</div>
+				]]></search>
+            <add><![CDATA[
+            
+            <div id="eo-pcbi-error" class="modal" tabindex="-1" role="dialog">
+	          <div class="modal-dialog">
+	            <div class="modal-content">
+	              <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                <h4 class="modal-title">Integration error</h4>
+	              </div>
+	              <div class="modal-body">
+	                  <p>Site administrator please contact Product Color Based Images extension support for <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=33691#comment-input-box" target="new">theame integration</a>.</p>
+	              </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+
+            <script type="text/javascript">
+            var eo_image_map=JSON.parse('{{eo_image_map}}');
+            
+            var prime_image=undefined;
+
+             $(document).ready(function(){
+             	
+             	var default_img=eo_image_map[Object.keys(eo_image_map)[0]];             	
+             	default_img=default_img[default_img.length-1];
+             	
+             	function eo_get_parent_node(img_type){
+					
+					img=Array();
+					var parent_found=false;
+					var parent_node=undefined;
+					$.each(eo_image_map,function(i,e){
+						$.each(e,function(index,image){
+							img.push(image[img_type]);
+						});
+					});
+					
+					while(!parent_found && parent_node!=$('body')){
+						if(parent_node==undefined){
+							parent_node=$("img[src='"+img[0]+"']").parent();
+						}else{
+							parent_node=$(parent_node).parent();
+						}
+						
+						for(i=1;i<img.length;i++){
+							if($(parent_node).find("img[src='"+img[i]+"']").length>=1){
+								parent_found=true;
+							}
+							else{
+								parent_found=false;
+								break;
+							}
+						}
+					}					
+					return parent_node;
+             	}
+
+             	var parent_additional=eo_get_parent_node('additional');
+             	if(!parent_additional){
+             		$('#eo-pcbi-error').show();
+             	}
+             	//var parent_thumb=eo_get_parent_node('thumb');
+             	
+             	$(document).on('change', '[name^=\'option[\']', function () {
+					var opt_id=$(this).val();
+					
+					if(eo_image_map.hasOwnProperty(opt_id)){
+						$('#content').fadeOut(100,function(){
+							$.each(eo_image_map,function(i,e){
+							
+								$.each(e,function(j,f){									
+									if(i==opt_id){										
+										$("img[src*='"+f['additional']+"']").parentsUntil(parent_additional).show();
+									}
+									else{
+										$("img[src*='"+f['additional']+"']").parentsUntil(parent_additional).hide();
+									}		
+								});							
+							});
+
+							$('#content').fadeIn(1000);		
+						});	
+					}													            
+				});
+		        
+             });
+                        
+			</script>
+			]]></add>
+        </operation>
+    </file>
+	
+	<file name="catalog/view/theme/default/template/product/product.tpl" error="log">
+	    <operation error="log" info="javascript for image change">
+            <search position="after"><![CDATA[<?php echo $content_bottom; ?></div>
+				]]></search>
+            <add><![CDATA[
+	        <div id="eo-pcbi-error" class="modal" tabindex="-1" role="dialog">
+	          <div class="modal-dialog">
+	            <div class="modal-content">
+	              <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                <h4 class="modal-title">Integration error</h4>
+	              </div>
+	              <div class="modal-body">
+	                  <p>Site administrator please contact Product Color Based Images extension support for <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=33691#comment-input-box" target="new">theame integration</a>.</p>
+	              </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+            
+            <script type="text/javascript">
+            var eo_image_map=JSON.parse('{{eo_image_map}}');
+            
+            var prime_image=undefined;
+
+             $(document).ready(function(){
+             	
+             	var default_img=eo_image_map[Object.keys(eo_image_map)[0]];             	
+             	default_img=default_img[default_img.length-1];
+             	
+             	function eo_get_parent_node(img_type){
+					
+					img=Array();
+					var parent_found=false;
+					var parent_node=undefined;
+					$.each(eo_image_map,function(i,e){
+						$.each(e,function(index,image){
+							img.push(image[img_type]);
+						});
+					});
+					
+					while(!parent_found){
+						if(parent_node==undefined){
+							parent_node=$("img[src='"+img[0]+"']").parent();
+						}else{
+							parent_node=$(parent_node).parent();
+						}
+						
+						for(i=1;i<img.length;i++){
+							if($(parent_node).find("img[src='"+img[i]+"']").length>=1){
+								parent_found=true;
+							}
+							else{
+								parent_found=false;
+								break;
+							}
+						}
+					}					
+					return parent_node;
+             	}
+
+             	var parent_additional=eo_get_parent_node('additional');
+
+             	if(!parent_additional){
+             		$('#eo-pcbi-error').show();
+             	}
+
+             	//var parent_thumb=eo_get_parent_node('thumb');
+             	
+             	$(document).on('change', '[name^=\'option[\']', function () {
+					var opt_id=$(this).val();
+					
+					if(eo_image_map.hasOwnProperty(opt_id)){
+						$('#content').fadeOut(100,function(){
+							$.each(eo_image_map,function(i,e){
+							
+								$.each(e,function(j,f){								
+									if(i==opt_id){										
+										$("img[src*='"+f['additional']+"']").parentsUntil(parent_additional).show();
+									}
+									else{
+										$("img[src*='"+f['additional']+"']").parentsUntil(parent_additional).hide();
+									}		
+								});							
+							});
+
+							$('#content').fadeIn(1000);		
+						});	
+					}													            
+				});
+		        
+             });
+                        
+			</script>
+			]]></add>
+        </operation>
+    </file>    
+</modification>

@@ -1,0 +1,35 @@
+<?php
+// Text
+$_['text_new_subject']          = '%s - Pedido %s';
+$_['text_new_greeting']         = 'Gracias por elegirnos. Este email es un acuse de recibo por la orden de compra que has realizado en nuestra tienda online. No es una factura, ni indica que tu pago haya sido acreditado. Hasta que no recibamos la confirmación de pago, no iniciaremos la entrega de tu compra.';
+$_['text_new_received']         = 'Has recibido un pedido.';
+$_['text_new_link']             = 'Para ver el pedido debes hacer click en el siguiente link:';
+$_['text_new_order_detail']     = 'Detalles del Pedido';
+$_['text_new_instruction']      = 'Instruciones';
+$_['text_new_order_id']         = 'Pedido ID:';
+$_['text_new_date_added']       = 'Fecha Pedido:';
+$_['text_new_order_status']     = 'Estado del Pedido:';
+$_['text_new_payment_method']   = 'M&eacute;todo de Pago:';
+$_['text_new_shipping_method']  = 'M&eacute;todo de Env&iacute;o:';
+$_['text_new_email']  			= 'E-mail:';
+$_['text_new_telephone']  		= 'Tel&eacute;fono:';
+$_['text_new_ip']  				= 'Direcci&oacute;n IP:';
+$_['text_new_payment_address']  = 'Direcci&oacute;n de Pago';
+$_['text_new_shipping_address'] = 'Direcci&oacute;n de Env&iacute;o';
+$_['text_new_products']         = 'Productos';
+$_['text_new_product']          = 'Producto';
+$_['text_new_model']            = 'Modelo';
+$_['text_new_quantity']         = 'Cantidad';
+$_['text_new_price']            = 'Precio';
+$_['text_new_order_total']      = 'Total de Pedidos';
+$_['text_new_total']            = 'Total';
+$_['text_new_download']         = 'Una vez que tu pago haya sido acreditado podrás acceder al siguiente descargable:';
+$_['text_new_comment']          = 'Los comentarios de tu pedido son:';
+$_['text_new_footer']           = 'Por favor, responde a este correo electr&oacute;nico si tienes alguna pregunta.';
+$_['text_update_subject']       = '%s - Pedido actualizado %s';
+$_['text_update_order']         = 'Pedido ID:';
+$_['text_update_date_added']    = 'Fecha de Pedido:';
+$_['text_update_order_status']  = 'Tu pedido ha sido actualizado hacia el siguiente estado:';
+$_['text_update_comment']       = 'Estos son los comentarios sobre tu pedido:';
+$_['text_update_link']          = 'Para ver tu orden debes hacer click en el siguiente link::';
+$_['text_update_footer']        = 'Por favor, responde a este correo electr&oacute;nico si tienes alguna pregunta.';
