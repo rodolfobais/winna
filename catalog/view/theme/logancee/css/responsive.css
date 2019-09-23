@@ -217,8 +217,8 @@
           
           /* @group Center column */
 		
-		.responsive .center-column {
-		}
+		/*.responsive .center-column {
+		}*/
 		
 		/* @end */
 		
@@ -253,8 +253,8 @@
 					
 		/* @group Category page */
 		
-		.responsive .product-filter {
-		}
+		/*.responsive .product-filter {
+		}*/
 		
 			.responsive .product-filter .options,
 			.responsive .product-filter .list-options,
@@ -320,7 +320,7 @@
 	-----------------*/
 	
 	.responsive .footer .pattern {
-	     text-align: center;
+	     text-align: left;
 	     padding-top: 27px;
 	}
 	

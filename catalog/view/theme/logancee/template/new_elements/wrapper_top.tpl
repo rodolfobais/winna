@@ -41,7 +41,7 @@ $modules_old_opencart = new Modules($registry); ?>
 				$preface_right = $modules_old_opencart->getModules('preface_right');
 				?>
 				<?php if( count($preface_left) || count($preface_right) ) { ?>
-				<div class="row">
+				<div class="row preface_right">
 					<div class="col-sm-9">
 						<?php
 						if( count($preface_left) ) {
@@ -65,14 +65,14 @@ $modules_old_opencart = new Modules($registry); ?>
 				<?php 
 				$preface_fullwidth = $modules_old_opencart->getModules('preface_fullwidth');
 				if( count($preface_fullwidth) ) {
-					echo '<div class="row"><div class="col-sm-12">';
+					echo '<div class="row preface_fullwidth"><div class="col-sm-12">';
 					foreach ($preface_fullwidth as $module) {
 						echo $module;
 					}
 					echo '</div></div>';
 				} ?>
 				
-				<div class="row">
+				<div class="row column_left">
 					<?php 
 					$columnleft = $modules_old_opencart->getModules('column_left');
 					if( count($columnleft) ) { ?>
@@ -86,7 +86,7 @@ $modules_old_opencart = new Modules($registry); ?>
 					<?php } ?>
 					
 					<?php $grid_center = 12; if( count($columnleft) ) { $grid_center = 9; } ?>
-					<div class="col-md-<?php echo $grid_center; ?>">
+					<div class="col-md-<?php echo $grid_center; ?> content_big_column">
 						<?php 
 						$content_big_column = $modules_old_opencart->getModules('content_big_column');
 						if( count($content_big_column) ) { 
@@ -103,7 +103,7 @@ $modules_old_opencart = new Modules($registry); ?>
 							}
 						} ?>
 						
-						<div class="row">
+						<div class="row column_right">
 							<?php 
 							$grid_content_top = 12; 
 							$grid_content_right = 3;
@@ -118,7 +118,7 @@ $modules_old_opencart = new Modules($registry); ?>
 								}
 							}
 							?>
-							<div class="col-md-<?php echo $grid_content_top; ?> center-column" id="content">
+							<div class="col-md-<?php echo $grid_content_top; ?> center-column error_warning" id="content">
 
 								<?php if (isset($error_warning)) { ?>
 									<?php if ($error_warning) { ?>

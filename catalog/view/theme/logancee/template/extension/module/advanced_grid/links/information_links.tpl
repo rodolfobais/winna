@@ -1,8 +1,24 @@
+<script>
+	$(window).load(function() {    
+		ocultarMostrarFooter();			
+		$(window).resize(function () {
+			ocultarMostrarFooter()
+		});
+	});
+	function ocultarMostrarFooter(){
+		var viewportWidth = $(window).width();
+		if (viewportWidth < 768) {
+			$(".footer-desktop").hide();
+			$(".footer-mobile").show();
+		}else{
+			$(".footer-desktop").show();
+			$(".footer-mobile").hide();
+		}
+	}
+</script>
 <?php 
+if($grupo == ""){ $grupo = 0;}
 if($position == 'footer_bottom' || $position == 'footer' || $position == 'footer_top' || $position == 'footer_left' || $position == 'footer_right' || $position == 'customfooter_top' || $position == 'customfooter_bottom' || $position == 'customfooter') {
-	echo '<h4 class="information-box">'.$module['content']['title'].'</h4>';
-	echo '<div class="strip-line"></div>';
-	
 	$count_columns = ceil(count($module['content']['links'])/$module['content']['limit']);
 	$class = 3; 
 	
@@ -12,23 +28,58 @@ if($position == 'footer_bottom' || $position == 'footer' || $position == 'footer
 	if($count_columns == 4) $class = 3;
 	if($count_columns == 5) $class = 25;
 	if($count_columns == 6) $class = 2;
-	
-	echo '<div class="row" style="clear: both">';
-	     echo '<div class="col-sm-' . $class . '">';
-	          echo '<ul class="information-links">';
-	               $i = 0;
-               	foreach($module['content']['links'] as $link) {
-               	     if($module['content']['limit'] == $i) {
-               	          $i = 0;
-               	          echo '</ul></div><div class="col-sm-' . $class . '"><ul>';
-               	     }
-               	     
-               	     echo '<li><a href="' . $link['url'] . '">' . $link['name'] . '</a></li>';
-               	     $i++;
-               	}
-               echo '</ul>';
-          echo '</div>';
-     echo '</div>';
+
+	//Estos son los links del mobile	
+	echo '<div class="panel panel-default footer-mobile">';
+		echo '<div class="panel-heading">';
+			echo '<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#grupo_'.$grupo.'">'.$module['content']['title'].'</h4>';
+			echo '<div class="icono_mas">+</div>';
+		echo '</div>';
+		echo '<div id="grupo_'.$grupo.'" class="panel-collapse collapse">';
+			echo '<div class="panel-body">';
+				echo '<div class="row" style="clear: both">';
+					echo '<div class="col-sm-' . $class . '">';
+						echo '<ul class="information-links">';
+							$i = 0;
+							foreach($module['content']['links'] as $link) {
+								if($module['content']['limit'] == $i) {
+									$i = 0;
+									echo '</ul></div><div class="col-sm-' . $class . '"><ul>';
+								}								
+								echo '<li><a href="' . $link['url'] . '">' . $link['name'] . '</a></li>';
+								$i++;
+							}
+						echo '</ul>';
+					echo '</div>';
+				echo '</div>';
+			echo '</div>';
+		echo '</div>';
+	echo '</div>';
+
+	//Aca pongo los links del desktop
+	echo '<div class=" footer-desktop">';
+		echo '<h4 class="information-box">'.$module['content']['title'].'</h4>';
+		echo '<div class="strip-line"></div>';	
+		echo '<div class="row" style="clear: both">';
+			echo '<div class="col-sm-' . $class . '">';
+				echo '<ul class="information-links">';
+					$i = 0;
+					foreach($module['content']['links'] as $link) {
+						if($module['content']['limit'] == $i) {
+							$i = 0;
+							echo '</ul></div><div class="col-sm-' . $class . '"><ul>';
+						}
+						
+						echo '<li><a href="' . $link['url'] . '">' . $link['name'] . '</a></li>';
+						$i++;
+					}
+				echo '</ul>';
+			echo '</div>';
+		echo '</div>';
+	echo '</div>';
+
+
+	$grupo++;
 } else {
 	echo '<div class="box">';
 		echo '<div class="box-heading">';
@@ -64,4 +115,6 @@ if($position == 'footer_bottom' || $position == 'footer' || $position == 'footer
 			echo '</div>';
 		echo '</div>';
 	echo '</div>';	
-} ?>
+} 
+
+?>

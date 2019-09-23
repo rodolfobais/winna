@@ -7,6 +7,7 @@ if(isset($mfilter_json)) {
 
 $theme_options = $registry->get('theme_options');
 $config = $registry->get('config'); 
+//echo 'catalog/view/theme/'.$config->get($config->get('config_theme') . '_directory').'/template/new_elements/wrapper_top.tpl';
 include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_directory').'/template/new_elements/wrapper_top.tpl'); ?>
 
 
@@ -19,14 +20,14 @@ include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_dire
 <div id="mfilter-content-container">
 
   <?php if ($thumb || $description) { ?>
-  <div class="category-info clearfix">
-    <?php if ($thumb) { ?>
-    <div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></div>
-    <?php } ?>
-    <?php if ($description) { ?>
-    <?php echo $description; ?>
-    <?php } ?>
-  </div>
+	<div class="category-info clearfix">
+		<?php if ($thumb) { ?>
+		<div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /> </div>
+		<?php } ?>
+		<?php if ($description) { ?>
+		<?php echo $description; ?>
+		<?php } ?>
+	</div>
   <?php } ?>
   <?php if ($categories && $theme_options->get('refine_search_style') != '2') { ?>
   
@@ -76,38 +77,33 @@ include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_dire
   <?php if ($products) { ?>
   
   <!-- Filter -->
-  <div class="product-filter clearfix">
-  	<div class="options">
-  		
-  		<div class="button-group display" data-toggle="buttons-radio">
-  		</div>
-  	</div>
-  	
-  	<div class="list-options">
-  		<div class="sort">
-  			<?php echo $text_sort; ?>
-  			<select onchange="location = this.value;">
-  			  <?php foreach ($sorts as $sorts) { ?>
-  			  <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-  			  <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-  			  <?php } else { ?>
-  			  <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-  			  <?php } ?>
-  			  <?php } ?>
-  			</select>
-  		</div>
-  		
-  		
-  	</div>
-	
+	<!--
+	<div class="product-filter clearfix">
+		<div class="options">
+			
+			<div class="button-group display" data-toggle="buttons-radio">
+			</div>
+		</div>
 
-	
-	 </div>
-		<!-- bread-crumb start here -->
-
+		<div class="list-options">
+			<div class="sort">
+				<?php echo $text_sort; ?>
+				<select onchange="location = this.value;">
+					<?php foreach ($sorts as $sorts) { ?>
+						<?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+							<option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+						<?php } else { ?>
+							<option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+						<?php } ?>
+					<?php } ?>
+				</select>
+			</div>
+		</div>
+	</div>
+	-->
+	<!-- bread-crumb start here -->
 <div class="fall">
-	<?php echo $heading_title; ?>
-	
+	<?php echo $heading_title; ?>	
 </div>
 
 <!-- bread-crumb end here -->
@@ -124,9 +120,10 @@ include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_dire
   
   if($theme_options->get( 'product_per_pow2' ) == 6) { $class = 2; }
   if($theme_options->get( 'product_per_pow2' ) == 5) { $class = 25; }
-  if($theme_options->get( 'product_per_pow2' ) == 3) { $class = 4; }
-  
+  if($theme_options->get( 'product_per_pow2' ) == 3) { $class = 4; }  
   if($theme_options->get( 'product_per_pow2' ) > 1) { $row = $theme_options->get( 'product_per_pow2' ); } 
+
+  if($_GET['product_per_pow'] == 2) { $class = 6; }
   ?>
   <div class="product-grid"<?php if($theme_options->get('default_list_grid') == '1') { echo ' class="active"'; } ?>>
   	<div class="row">

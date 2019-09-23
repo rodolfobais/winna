@@ -27,7 +27,7 @@ $id = rand(0, 5000)*rand(5000, 50000); ?>
 		</div>
 	</div>
 	<?php } ?>
-	<div class="megamenu-wrapper">
+	<div class="megamenu-wrapper col-xs-10 col-md-12 template-extension-module">
 		<div class="megamenu-pattern">
 			<div class="container">
 				<ul class="megamenu <?php if($ustawienia['animation'] != '') { echo $ustawienia['animation']; } ?>">
@@ -123,7 +123,7 @@ $id = rand(0, 5000)*rand(5000, 50000); ?>
 													} else {
 														$row_fluid = $row_fluid+$submenu['content_width'];
 													}
-													echo '<div class="col-sm-'.$submenu['content_width'].'  ' . ($submenu['display_on_mobile'] == '1' ? 'mobile-disabled' : 'mobile-enabled') . '">';
+													echo '<div class="col-xs-12 col-sm-'.$submenu['content_width'].'  ' . ($submenu['display_on_mobile'] == '1' ? 'mobile-disabled' : 'mobile-enabled') . '">';
 														if($submenu['content_type'] == '0') {
 															echo $submenu['html'];
 														} elseif($submenu['content_type'] == '1') {

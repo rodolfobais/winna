@@ -167,8 +167,8 @@
 						          <div class="hidden-xs hidden-sm col-xs-12 col-sm-12 col-md-6 col-lg-6">
 						              
 						          </div>
-						          
-						          <div class="settings-topbar visible-sm-block visible-xs-block col-xs-2">
+						          <!--
+						          <div class="settings-topbar visible-sm-block hidden-xs col-xs-2">
 						               <div class="settings">
 						                    <i class="icon-plus"></i>
 						                    <div class="settings-inner">
@@ -200,6 +200,7 @@
 						                    </div>
 						               </div>
 						          </div>
+								  -->
 						     </div>
 						</div>
 					</div>
@@ -207,29 +208,24 @@
 			</div>
 		</div>
 		
-		<!-- Top of pages -->
-		<div id="top" class="<?php if($theme_options->get( 'header_layout' ) == 2) { echo 'fixed'; } else { echo 'full-width'; } ?>">
+		<!-- Top of pages desktop-->
+		<div id="top" class="menu-desktop <?php if($theme_options->get( 'header_layout' ) == 2) { echo 'fixed'; } else { echo 'full-width'; } ?>">
 			<div class="background-top"></div>
 			<div class="background">
 				<div class="shadow"></div>
 				<div class="pattern">
 					<div class="container">
 					     <div class="sticky-header is-sticky">
+						 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						 
-						 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						 
-					          <div class="logo-home">
-					               <?php if ($logo) { ?>
-					               <a href="<?php echo $home; ?>"><span><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></span></a>
-					               <?php } ?>
-					          </div>
-							  
-							   </div>
-							   
-							   
-					       
-					          <div class="sticky-icon-group">
-					               <div class="sticky-search">
+								<div class="logo-home">
+									<?php if ($logo) { ?>
+										<a href="<?php echo $home; ?>"><span><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></span></a>
+									<?php } ?>
+								</div>
+							</div>					       
+							<div class="sticky-icon-group">
+								<div class="sticky-search">
 					                    <i class="icon-magnifier"></i>
 					                    <div class="quick-search">
 					                         <div class="form-search">
@@ -245,105 +241,104 @@
 					               </div>
 					               
 					               <div class="settings">
-					                     <i class="icon-plus"></i>
-					                     <div class="settings-inner">
-					                          <div class="setting-content">
-					                               <?php if($language != '') { ?>
-					                               <div class="setting-language">
-					                                    <div class="title"><?php if($theme_options->get( 'select_language_text', $config->get( 'config_language_id' ) ) != '') { echo html_entity_decode($theme_options->get( 'select_language_text', $config->get( 'config_language_id' ) )); } else { echo 'Select language'; } ?></div>
-					                                    <?php echo $language; ?>
-					                               </div>
-					                               <?php } ?>
+										<i class="icon-plus"></i>
+										<div class="settings-inner">
+											<div class="setting-content">
+												<?php if($language != '') { ?>
+													<div class="setting-language">
+														<div class="title"><?php if($theme_options->get( 'select_language_text', $config->get( 'config_language_id' ) ) != '') { echo html_entity_decode($theme_options->get( 'select_language_text', $config->get( 'config_language_id' ) )); } else { echo 'Select language'; } ?></div>
+														<?php echo $language; ?>
+													</div>
+												<?php } ?>
 					                               
-					                               <?php if($currency != '') { ?>
-					                               <div class="setting-currency">
-					                                    <div class="title"><?php if($theme_options->get( 'select_currency_text', $config->get( 'config_language_id' ) ) != '') { echo html_entity_decode($theme_options->get( 'select_currency_text', $config->get( 'config_language_id' ) )); } else { echo 'Select currency'; } ?></div>
-					                                    <?php echo $currency; ?>
-					                               </div>
-					                               <?php } ?>
+												<?php if($currency != '') { ?>
+													<div class="setting-currency">
+														<div class="title"><?php if($theme_options->get( 'select_currency_text', $config->get( 'config_language_id' ) ) != '') { echo html_entity_decode($theme_options->get( 'select_currency_text', $config->get( 'config_language_id' ) )); } else { echo 'Select currency'; } ?></div>
+														<?php echo $currency; ?>
+													</div>
+												<?php } ?>
 					                               
-					                               <div class="setting-option">
-					                                    <ul>
-					                                         <li><a href="<?php echo $login; ?>"><i class="icon-lock-open icons"></i><span><?php echo $text_login; ?> / <?php echo $text_register; ?></span></a></li>
-					                                        <li><a href="<?php echo $wishlist; ?>"><i class="icon-heart icons"></i><span><?php echo $text_wishlist; ?></span></a></li>
-					                                        <li><a href="<?php echo $checkout; ?>"><i class="icon-note icons"></i><span><?php echo $text_checkout; ?></span></a></li>
-					                                    </ul>
-					                               </div>
-					                          </div>
-					                     </div>
+												<div class="setting-option">
+													<ul>
+														<li><a href="<?php echo $login; ?>"><i class="icon-lock-open icons"></i><span><?php echo $text_login; ?> / <?php echo $text_register; ?></span></a></li>
+														<li><a href="<?php echo $wishlist; ?>"><i class="icon-heart icons"></i><span><?php echo $text_wishlist; ?></span></a></li>
+														<li><a href="<?php echo $checkout; ?>"><i class="icon-note icons"></i><span><?php echo $text_checkout; ?></span></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
 					                </div>
-									</div>
-					        
+								</div>
 					          
-					          <div class="main-menu">
-					               <?php 
-					               $menu = $modules->getModules('menu');
-					               if( count($menu) ) {
-					               	foreach ($menu as $module) {
-					               		echo $module;
-					               	}
-					               } elseif($categories) {
-					               ?>
-					               <div class="container-megamenu container horizontal">
-					               	<div class="megaMenuToggle">
-					               		<div class="megamenuToogle-wrapper">
-					               			<div class="megamenuToogle-pattern">
-					               				<div class="container">
-					               					<div><span></span><span></span><span></span></div>
-					               					MENU
+					          	<div class="main-menu">
+									<?php 
+									$menu = $modules->getModules('menu');
+									if( count($menu) ) {
+										foreach ($menu as $module) { echo $module; }
+									} elseif($categories) {
+									?>
+										<div class="container-megamenu container horizontal">
+											<div class="megaMenuToggle">
+												<div class="megamenuToogle-wrapper">
+													<div class="megamenuToogle-pattern">
+														<div class="container">
+															<div>
+																<span></span><span></span><span></span>
+															</div>
+															MENU
+														</div>
+													</div>
+												</div>
+											</div>
+					               	
+					               			<div class="megamenu-wrapper">
+					               				<div class="megamenu-pattern">
+					               					<div class="container">
+					               						<ul class="megamenu shift-up">
+					               							<?php foreach ($categories as $category) { ?>
+					               								<?php if ($category['children']) { ?>
+					               									<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>
+					               										<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+					               								<?php } else { ?>
+																	<li>
+					               										<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+					               								<?php } ?>
+					               								<?php if ($category['children']) { ?>
+																	<?php 
+																		$width = '100%';
+																		$row_fluid = 3;
+																		if($category['column'] == 1) { $width = '270px'; $row_fluid = 12; }
+																		if($category['column'] == 2) { $width = '500px'; $row_fluid = 6; }
+																		if($category['column'] == 3) { $width = '700px'; $row_fluid = 4; }
+																	?>
+																	<div class="sub-menu" style="width: <?php echo $width; ?>">
+																		<div class="content">
+																			<p class="arrow"></p>
+																			<div class="row hover-menu">
+																				<?php for ($i = 0; $i < count($category['children']);) { ?>
+																				<div class="col-sm-<?php echo $row_fluid; ?> mobile-enabled">
+																					<div class="menu">
+																						<ul>
+																						<?php $j = $i + ceil(count($category['children']) / $category['column']); ?>
+																						<?php for (; $i < $j; $i++) { ?>
+																						<?php if (isset($category['children'][$i])) { ?>
+																						<li><a href="<?php echo $category['children'][$i]['href']; ?>" onclick="window.location = '<?php echo $category['children'][$i]['href']; ?>';"><?php echo $category['children'][$i]['name']; ?></a></li>
+																						<?php } ?>
+																						<?php } ?>
+																						</ul>
+																					</div>
+																				</div>
+																				<?php } ?>
+																			</div>
+																		</div>
+																	</div>
+					               								<?php } ?>
+					               							</li>
+					               						<?php } ?>
+					               					</ul>
 					               				</div>
 					               			</div>
 					               		</div>
-					               	</div>
-					               	
-					               	<div class="megamenu-wrapper">
-					               		<div class="megamenu-pattern">
-					               			<div class="container">
-					               				<ul class="megamenu shift-up">
-					               					<?php foreach ($categories as $category) { ?>
-					               					<?php if ($category['children']) { ?>
-					               					<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>
-					               						<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
-					               					<?php } else { ?>
-					               					<li>
-					               						<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
-					               					<?php } ?>
-					               						<?php if ($category['children']) { ?>
-					               						<?php 
-					               							$width = '100%';
-					               							$row_fluid = 3;
-					               							if($category['column'] == 1) { $width = '270px'; $row_fluid = 12; }
-					               							if($category['column'] == 2) { $width = '500px'; $row_fluid = 6; }
-					               							if($category['column'] == 3) { $width = '700px'; $row_fluid = 4; }
-					               						?>
-					               						<div class="sub-menu" style="width: <?php echo $width; ?>">
-					               							<div class="content">
-					               								<p class="arrow"></p>
-					               								<div class="row hover-menu">
-					               									<?php for ($i = 0; $i < count($category['children']);) { ?>
-					               									<div class="col-sm-<?php echo $row_fluid; ?> mobile-enabled">
-					               										<div class="menu">
-					               											<ul>
-					               											  <?php $j = $i + ceil(count($category['children']) / $category['column']); ?>
-					               											  <?php for (; $i < $j; $i++) { ?>
-					               											  <?php if (isset($category['children'][$i])) { ?>
-					               											  <li><a href="<?php echo $category['children'][$i]['href']; ?>" onclick="window.location = '<?php echo $category['children'][$i]['href']; ?>';"><?php echo $category['children'][$i]['name']; ?></a></li>
-					               											  <?php } ?>
-					               											  <?php } ?>
-					               											</ul>
-					               										</div>
-					               									</div>
-					               									<?php } ?>
-					               								</div>
-					               							</div>
-					               						</div>
-					               						<?php } ?>
-					               					</li>
-					               					<?php } ?>
-					               				</ul>
-					               			</div>
-					               		</div>
-					               	</div>
 					               </div>
 					               <?php
 					               }
@@ -354,6 +349,116 @@
 				</div>
 			</div>
 		</div>
+		<!-- END Top of pages -->
+
+		<!-- Top of pages mobile-->
+		<div id="top" class="menu-mobile <?php if($theme_options->get( 'header_layout' ) == 2) { echo 'fixed'; } else { echo 'full-width'; } ?>">
+			<div class="background-top"></div>
+			<div class="background">
+				<div class="shadow"></div>
+				<div class="pattern">
+					<div class="container">
+					     <div class="sticky-header is-sticky">
+						 	<div class="col-xs-1 menu-principal">
+								<div class="main-menu">
+									<?php 
+									$menu = $modules->getModules('menu');
+									if( count($menu) ) {
+										foreach ($menu as $module) { echo $module; }
+									} elseif($categories) {
+									?>
+										<div class="container-megamenu container horizontal">
+											<div class="megaMenuToggle">
+												<div class="megamenuToogle-wrapper">
+													<div class="megamenuToogle-pattern">
+														<div class="container">
+															<div>
+																<span></span><span></span><span></span>
+															</div>
+															MENU
+														</div>
+													</div>
+												</div>
+											</div>
+					               	
+					               			<div class="megamenu-wrapper">
+					               				<div class="megamenu-pattern">
+					               					<div class="container">
+					               						<ul class="megamenu shift-up">
+					               							<?php foreach ($categories as $category) { ?>
+					               								<?php if ($category['children']) { ?>
+					               									<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>
+					               										<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+					               								<?php } else { ?>
+																	<li>
+					               										<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+					               								<?php } ?>
+					               								<?php if ($category['children']) { ?>
+																	<?php 
+																		$width = '100%';
+																		$row_fluid = 3;
+																		if($category['column'] == 1) { $width = '270px'; $row_fluid = 12; }
+																		if($category['column'] == 2) { $width = '500px'; $row_fluid = 6; }
+																		if($category['column'] == 3) { $width = '700px'; $row_fluid = 4; }
+																	?>
+																	<div class="sub-menu" style="width: <?php echo $width; ?>">
+																		<div class="content">
+																			<p class="arrow"></p>
+																			<div class="row hover-menu">
+																				<?php for ($i = 0; $i < count($category['children']);) { ?>
+																				<div class="col-sm-<?php echo $row_fluid; ?> mobile-enabled">
+																					<div class="menu">
+																						<ul>
+																						<?php $j = $i + ceil(count($category['children']) / $category['column']); ?>
+																						<?php for (; $i < $j; $i++) { ?>
+																						<?php if (isset($category['children'][$i])) { ?>
+																						<li><a href="<?php echo $category['children'][$i]['href']; ?>" onclick="window.location = '<?php echo $category['children'][$i]['href']; ?>';"><?php echo $category['children'][$i]['name']; ?></a></li>
+																						<?php } ?>
+																						<?php } ?>
+																						</ul>
+																					</div>
+																				</div>
+																				<?php } ?>
+																			</div>
+																		</div>
+																	</div>
+					               								<?php } ?>
+					               							</li>
+					               						<?php } ?>
+					               					</ul>
+					               				</div>
+					               			</div>
+					               		</div>
+					               </div>
+					               <?php
+					               }
+					               ?>
+					          </div>
+							</div>
+						 	<div class="col-xs-8 imagen-del-logo">
+								<div class="logo-home" style="margin-top: 15px;">
+									<?php if ($logo) { ?>
+										<a href="<?php echo $home; ?>"><span><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></span></a>
+									<?php } ?>
+								</div>
+							</div>		
+
+							<div class="col-xs-1 imagen-corazon">
+								<a href="http://www.argentina.tulocalonline.com/edit/index.php?route=account/wishlist">
+									<span class="icon-cart"><i class="icon-heart icons"></i></span>
+								</a>
+							</div>
+
+							<div class="col-xs-1 imagen-bolsa">
+								<div class="sticky-cart">
+									<?php echo $cart; ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- END Top of pages -->
 	</div>
 	
 	<?php $slideshow = $modules->getModules('slideshow'); ?>
@@ -371,4 +476,25 @@
 		</div>
 	</div>
 	<?php } ?>
+	<script>
+		$(window).load(function() {    
+			cambiarImagen();			
+			$(window).resize(function () {
+				cambiarImagen()
+			});
+		});
+		function cambiarImagen(){
+			var viewportWidth = $(window).width();
+			var imagen = "image/catalog/BANNERS/2019/WL_Web_Banner_Shop.jpg";
+			if (viewportWidth < 768) {
+				imagen = "image/catalog/BANNERS/2019/WL_WebMobile_Home_Banner_Carrusel_1080x1272.png";
+				$(".menu-desktop").hide();
+				$(".menu-mobile").show();
+			}else{
+				$(".menu-desktop").show();
+				$(".menu-mobile").hide();
+			}
+			$("#slider .camera_slider .owl-item img").attr("src",imagen);
+		}
+	</script>
 </header>
