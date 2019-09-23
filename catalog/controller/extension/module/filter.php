@@ -11,7 +11,21 @@ class ControllerExtensionModuleFilter extends Controller {
 
 		$this->load->model('catalog/category');
 
+		$data['breadcrumbs'] = array();
+
+		$data['breadcrumbs'][] = array(
+			'text' => 'COLLECTION',//$this->language->get('text_home'),
+			'href' => '#'//$this->url->link('common/home')
+		);
+
 		$category_info = $this->model_catalog_category->getCategory($category_id);
+
+		if ($category_info) {
+			$data['breadcrumbs'][] = array(
+				'text' => " | ".$category_info['name'],
+				'href' => $this->url->link('product/category', 'path=' . $path)
+			);
+		}
 
 		if ($category_info) {
 			$this->load->language('extension/module/filter');
