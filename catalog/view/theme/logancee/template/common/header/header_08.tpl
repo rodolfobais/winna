@@ -260,7 +260,7 @@
 					                               
 												<div class="setting-option">
 													<ul>
-														<li><a href="<?php echo $login; ?>"><i class="icon-lock-open icons"></i><span><?php echo $text_login; ?> / <?php echo $text_register; ?></span></a></li>
+														<li><a href="#" onclick="openLoginPopUp(event)"><i class="icon-lock-open icons"></i><span><?php echo $text_login; ?> / <?php echo $text_register; ?></span></a></li>
 														<li><a href="<?php echo $wishlist; ?>"><i class="icon-heart icons"></i><span><?php echo $text_wishlist; ?></span></a></li>
 														<li><a href="<?php echo $checkout; ?>"><i class="icon-note icons"></i><span><?php echo $text_checkout; ?></span></a></li>
 													</ul>
@@ -498,3 +498,96 @@
 		}
 	</script>
 </header>
+
+
+<!-- POP UP LOGIN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script>
+function openLoginPopUp(event) {
+	event.preventDefault();
+	$("#dialog-login").modal({ closeClass: 'icon-remove', closeText: 'X' });
+}
+</script>
+
+<div id="dialog-login" class="" title="Login" style="display:none">
+	<form action="index.php?route=account/login" method="post" enctype="multipart/form-data">
+		<div class="titulo">Acced&eacute; a tu cuenta</div>
+		<div class="text-box-email">
+			<input name="email" type="text" id="mail-text" placeholder="Inges&aacute; tu email"  class="input-text email required-entry validate-email">
+		</div>
+		<div class="text-box-password">
+			<input name="password" type="password" id="mail-password" placeholder="Inges&aacute; tu email"  class="input-text email required-entry validate-email">
+		</div>
+		<div class="olvidaste-contrasenia"><u>¿Olvidaste tu contrase&ntilde;a?</u></div>
+		<div class="button-box">
+			<button class="hover-effect07 subscribebutton" type="submit" title="Ingresar"><span>Ingresar</span></button>
+		</div>
+		<div class="pie">
+			<b>¿Aún no ten&eacute;s tu usuario?</b>
+			<a href="index.php?route=account/register"><u>Registrate ahora</u></a>
+		</div>
+	</form>
+</div>
+
+
+
+<style>
+	#dialog-login .button-box button{
+		height: 40px;
+		line-height: 40px;
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0 8px;
+		background-color: darksalmon;
+		color: aliceblue;
+		font-family: auto;
+		font-size: larger;
+		font-weight: bolder;
+    	width: 150px;
+	}
+	#dialog-login .texto1{
+		padding-top: 10px;
+		color: aliceblue;
+		font-size: 30px;
+	}
+	#dialog-login .titulo, #dialog-login .texto1, #dialog-login .texto2, #dialog-login .text-box, #dialog-login .button-box{
+		padding-left: 30px;
+		font-family: auto;
+	}
+     #dialog-login .imagen img{
+         width: 500px;
+     }
+	#dialog-login .titulo{
+		font-size: 25px;
+		font-style: italic;
+    	padding-top: 55px;
+	}
+	#dialog-login{
+		max-width: 500px;
+		background-color: #f1e9e7;
+		z-index: 15;
+		height: inherit;
+		overflow: initial;
+		padding: 0px;
+		text-align: center;
+	}
+	.blocker{ z-index: 10; }
+	#dialog-login a.close-modal[class*="icon-"] {
+		top: -2px;
+		right: 22px;
+		width: 20px;
+		height: 20px;
+		color: #df7d5c;
+		font-size: 30px;
+		text-align: center;
+		text-decoration: none;
+		text-indent: 0;
+		-moz-border-radius: 26px;
+		-o-border-radius: 26px;
+		-ms-border-radius: 26px;
+		-moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+		background: none;
+	}
+</style>
