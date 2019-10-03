@@ -278,11 +278,6 @@ class ControllerProductProduct extends Controller {
 			$data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
 			$data['model'] = $product_info['model'];
 			$data['reward'] = $product_info['reward'];
-
-				$data['newtabcontent'] = html_entity_decode($product_info['newtabcontent'], ENT_QUOTES, 'UTF-8');
-				$this->load->language('product/newtab');
-				$data['text_newtabcontent'] = $product_info['newtabcontentname'];
-				
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 
