@@ -367,7 +367,173 @@ if($registry->has('theme_options') == true) {
 	</div>
 	<?php } ?>
 	<script type="text/javascript" src="catalog/view/theme/<?php echo $config->get($config->get('config_theme') . '_directory'); ?>/js/megamenu.js"></script>
+	<script>
+		///index.php?route=information/information&information_id=23
+		$('a[href$="link-modal-mayoristas"]').click(function(event){
+			event.preventDefault();
+			$("#dialog-mayoristas").modal({ closeClass: 'icon-remove', closeText: 'X' });
+		});
+		$('a[href$="link-modal-franquicias"]').click(function(event){
+			event.preventDefault();
+			$("#dialog-franquicias").modal({ closeClass: 'icon-remove', closeText: 'X' });
+		});
+	</script>
 </div>
+
+<div id="dialog-mayoristas" class="modal" title="Suscribete" role="dialog">
+     <div class="titulo" onclick='$(".blocker").click();'>Ventas por mayor</div>
+     <div class="imagen">
+          <img src='image/catalog/BANNERS/2019/WL_Web_Home_Mayorista_Image_690x210.jpg' /> 
+    </div>
+     <div class="texto1">CONTACTO</div>
+     <div class="texto2">
+		<b>INFO@WINNALOVE.COM</b>
+     </div>
+     <div class="texto3">
+		Escribinos para recibir toda la informaci&oacute;n y el cat&aacute;logo.<br>
+		Vendemos &uacute;nicamente a comerciantes con CUIT y local o showroom.
+     </div>
+</div>
+
+
+<div id="dialog-franquicias" class="modal" title="Suscribete" role="dialog">
+	<form action="http://www.argentina.tulocalonline.com/edit/index.php?route=information/contact" method="post" enctype="multipart/form-data">
+		<div class="titulo" onclick='$(".blocker").click();'>Evianos un mail</div>
+		<div class="texto2"> <b>INFO@WINNALOVE.COM</b> </div>
+		<div class="texto3">Atención al cliente: Lunes a Viernes de 10 a 17hs</div>
+		<div class="row">
+			<div class="field col-md-6">
+				<div class="input-box">
+					<input name="name" id="name" title="Name" value=""  type="text" placeholder="Tu Nombre">
+				</div>
+			</div>
+			<div class="field col-md-6">
+				<div class="input-box">
+					<input name="email" id="email" title="Email" value="" class="validate-email" type="text" placeholder="Correo Electrónico">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-box col-md-12 textarea-container">
+				<textarea name="enquiry" id="comment" title="Comentario" rows="5" placeholder="Comentario"></textarea>
+			</div>
+		</div>		
+		<div class="row button-box">
+			<button type="submit" title="Enviar" class="button"><span><span>Enviar</span></span></button>
+		</div>
+	</form>
+</div>
+
+
+<style>
+
+     #dialog-franquicias .titulo{
+		font-size: 25px;
+		font-style: italic;
+		font-family: Merriweather;
+		background-color: #f2e3de;
+		color: #bf8673
+     }
+
+	 #dialog-franquicias input, #dialog-franquicias textarea{
+		border: 1px solid;
+     }
+
+	 #dialog-franquicias textarea{
+		width: 100%;
+     }
+
+	 #dialog-franquicias .titulo, #dialog-franquicias .row, #dialog-franquicias .texto2, #dialog-franquicias .texto3{
+		padding-left: 30px;
+		font-family: Roboto;
+     }
+
+	 #dialog-franquicias .texto2{
+    	padding-top: 20px;
+	 }
+
+	 #dialog-franquicias .texto3{
+    	padding-bottom: 15px;
+	 }
+
+	 #dialog-franquicias .button-box{
+		text-align: right;
+    	padding-right: 35px;
+    	padding-bottom: 25px;
+	 }
+
+	 #dialog-franquicias .textarea-container{
+    	padding-right: 35px;
+	 }
+
+
+
+     
+     #dialog-mayoristas .texto1{
+          padding-top: 10px;
+          font-size: 30px;
+     }
+     #dialog-mayoristas .titulo, #dialog-mayoristas .texto1, #dialog-mayoristas .texto2, #dialog-mayoristas .texto3, #dialog-mayoristas .text-box, #dialog-mayoristas .button-box{
+          padding-left: 30px;
+          font-family: Roboto;
+     }
+     #dialog-mayoristas .imagen img{
+         width: 500px;
+		 border-bottom: 5px solid #eac0b2;
+     }
+     #dialog-mayoristas .titulo{
+         font-size: 25px;
+         font-style: italic;
+          font-family: Merriweather;
+     }
+     #dialog-mayoristas{
+          max-width: 500px;
+          background-color: #fff;
+          z-index: 15;
+          height: 360px;
+         overflow: initial;
+         padding: 0px;
+     }
+     .blocker{
+          z-index: 10;
+     }
+     .modal a.close-modal[class*="icon-"] {
+         top: -2px;
+         right: 22px;
+         width: 20px;
+         height: 20px;
+         color: #bf8673;
+         font-size: 30px;
+         text-align: center;
+         text-decoration: none;
+         text-indent: 0;
+         -moz-border-radius: 26px;
+          -o-border-radius: 26px;
+         -ms-border-radius: 26px;
+         -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+         background: none;
+     }
+
+	 .modal{
+		padding: 0px;
+		border-radius: unset;
+    	overflow: hidden;
+	 }
+	 .modal .button-box button{
+          height: 40px;
+          line-height: 40px;
+          top: 0;
+          right: 0;
+          margin: 0;
+          padding: 0 8px;
+          background-color: darksalmon;
+          color: aliceblue;
+          font-family: auto;
+          font-size: larger;
+          font-weight: bolder;
+     }
+</style>
+
 
 <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
 </div>
