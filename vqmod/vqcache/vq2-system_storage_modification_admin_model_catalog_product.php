@@ -10,14 +10,6 @@ class ModelCatalogProduct extends Model {
 			$this->db->query("UPDATE " . DB_PREFIX . "product SET image = '" . $this->db->escape($data['image']) . "' WHERE product_id = '" . (int)$product_id . "'");
 		}
 
-
-			if(isset($data['product_newtabcontent'])) {
-				$this->db->query("DELETE FROM " . DB_PREFIX . "product_newtabcontent WHERE product_id = '" . (int)$product_id . "'");
-				foreach ($data['product_newtabcontent'] as $language_id => $value) {
-					$this->db->query("INSERT INTO " . DB_PREFIX . "product_newtabcontent SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', newtabcontent = '" . $this->db->escape($value['newtabcontent']) . "',  name = '" . $this->db->escape($value['name']) . "'");
-				}
-			}
-				
 		foreach ($data['product_description'] as $language_id => $value) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
@@ -146,14 +138,6 @@ class ModelCatalogProduct extends Model {
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE product_id = '" . (int)$product_id . "'");
 
-
-			if(isset($data['product_newtabcontent'])) {
-				$this->db->query("DELETE FROM " . DB_PREFIX . "product_newtabcontent WHERE product_id = '" . (int)$product_id . "'");
-				foreach ($data['product_newtabcontent'] as $language_id => $value) {
-					$this->db->query("INSERT INTO " . DB_PREFIX . "product_newtabcontent SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', newtabcontent = '" . $this->db->escape($value['newtabcontent']) . "',  name = '" . $this->db->escape($value['name']) . "'");
-				}
-			}
-				
 		foreach ($data['product_description'] as $language_id => $value) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
@@ -503,22 +487,6 @@ class ModelCatalogProduct extends Model {
 		return $product_attribute_data;
 	}
 
-
-				public function getProductExtraContent($product_id) {
-					$product_newtabcontent_data = array();
-
-					$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_newtabcontent WHERE product_id = '" . (int)$product_id . "'");
-
-					foreach ($query->rows as $result) {
-						$product_newtabcontent_data[$result['language_id']] = array(
-							'newtabcontent'             => $result['newtabcontent'],
-							'name'             => $result['name']
-						);
-					}
-
-					return $product_newtabcontent_data;
-				}
-				
 	public function getProductOptions($product_id) {
 		$product_option_data = array();
 

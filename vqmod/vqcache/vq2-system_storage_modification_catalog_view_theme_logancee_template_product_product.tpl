@@ -531,7 +531,6 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 			        	
 			        </div></div>
 					
-		
 					<div class="panel panel-default">
 			    <div class="panel-heading">
 			      <h4 class="panel-title">
@@ -585,7 +584,7 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 	    		</div>
 	  		</div>
 					
-					   
+					
 					
 					
 					
@@ -705,9 +704,148 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
   ?>
   
   
-
+  <div id="tabs" class="htabs">
+  	<?php $i = 0; foreach($tabs as $tab) { $i++;
+  		$id = 'tab_'.$i;
+  		if($tab['content'] == 'description') { $id = 'tab-description'; }
+  		if($tab['content'] == 'attribute') { $id = 'tab-attribute'; }
+  		if($tab['content'] == 'review') { $id = 'tab-review'; }
+  		echo '<a href="#'.$id.'">'.$tab['heading'].'</a>';
+  	} ?>
+  </div>
   
- 
+  
+  
+  <?php $i = 0; foreach($tabs as $tab) { $i++;
+  	$id = 'tab_'.$i;
+  	if($tab['content'] != 'description' && $tab['content'] != 'attribute' && $tab['content'] != 'review') {
+  		echo '<div id="'.$id.'" class="tab-content">'.$tab['content'].'</div>';
+  	}
+  } ?>
+  <div id="tab-description" class="tab-content" itemprop="description"><?php echo $description; ?></div>
+  <?php if ($attribute_groups) { ?>
+  <div id="tab-attribute" class="tab-content">
+    <table class="attribute" cellspacing="0">
+      <?php foreach ($attribute_groups as $attribute_group) { ?>
+      <thead>
+        <tr>
+          <td colspan="2"><?php echo $attribute_group['name']; ?></td>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+        <tr>
+          <td><?php echo $attribute['name']; ?></td>
+          <td><?php echo $attribute['text']; ?></td>
+        </tr>
+        <?php } ?>
+      </tbody>
+      <?php } ?>
+    </table>
+  </div>
+  <?php } ?>
+  <?php if ($review_status) { ?>
+  <div id="tab-review" class="tab-content">
+	<form class="form-horizontal" id="form-review">
+	  <div id="review"></div>
+	  <h2><?php echo $text_write; ?></h2>
+	  <?php if ($review_guest) { ?>
+	  <div class="form-group required">
+	    <div class="col-sm-12">
+	      <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
+	      <input type="text" name="name" value="" id="input-name" class="form-control" />
+	    </div>
+	  </div>
+	  <div class="form-group required">
+	    <div class="col-sm-12">
+	         <label class="control-label"><?php echo $entry_rating; ?></label>
+	        
+	       <div class="rating set-rating">
+	          <i class="fa fa-star" data-value="1"></i>
+	          <i class="fa fa-star" data-value="2"></i>
+	          <i class="fa fa-star" data-value="3"></i>
+	          <i class="fa fa-star" data-value="4"></i>
+	          <i class="fa fa-star" data-value="5"></i>
+	      </div>
+	      <script type="text/javascript">
+	          $(document).ready(function() {
+	            $('.set-rating i').hover(function(){
+	                var rate = $(this).data('value');
+	                var i = 0;
+	                $('.set-rating i').each(function(){
+	                    i++;
+	                    if(i <= rate){
+	                        $(this).addClass('active');
+	                    }else{
+	                        $(this).removeClass('active');
+	                    }
+	                })
+	            })
+	            
+	            $('.set-rating i').mouseleave(function(){
+	                var rate = $('input[name="rating"]:checked').val();
+	                rate = parseInt(rate);
+	                i = 0;
+	                  $('.set-rating i').each(function(){
+	                    i++;
+	                    if(i <= rate){
+	                        $(this).addClass('active');
+	                    }else{
+	                        $(this).removeClass('active');
+	                    }
+	                  })
+	            })
+	            
+	            $('.set-rating i').click(function(){
+	                $('input[name="rating"]:nth('+ ($(this).data('value')-1) +')').prop('checked', true);
+	            });
+	          });
+	      </script>
+	      <div class="hidden">
+	         &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
+	         <input type="radio" name="rating" value="1" />
+	         &nbsp;
+	         <input type="radio" name="rating" value="2" />
+	         &nbsp;
+	         <input type="radio" name="rating" value="3" />
+	         &nbsp;
+	         <input type="radio" name="rating" value="4" />
+	         &nbsp;
+	         <input type="radio" name="rating" value="5" />
+	         &nbsp;<?php echo $entry_good; ?>
+	      </div>
+	   </div>
+	  </div>
+	  <div class="form-group required">
+	    <div class="col-sm-12">
+	      <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
+	      <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+	      <div class="help-block"><?php echo $text_note; ?></div>
+	    </div>
+	  </div>
+	  <?php echo $captcha; ?>
+	  <div class="buttons clearfix" style="margin-bottom: 0px">
+	    <div class="pull-right">
+	      <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
+	    </div>
+	  </div>
+	  <?php } else { ?>
+	  <?php echo $text_login; ?>
+	  <?php } ?>
+	</form>
+  </div>
+  <?php } ?>
+  <?php if ($tags) { ?>
+  <div class="tags_product"><b><?php echo $text_tags; ?></b>
+    <?php for ($i = 0; $i < count($tags); $i++) { ?>
+    <?php if ($i < (count($tags) - 1)) { ?>
+    <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>,
+    <?php } else { ?>
+    <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>
+    <?php } ?>
+    <?php } ?>
+  </div>
+  <?php } ?>
   
   <?php if ($products && $theme_options->get( 'product_related_status' ) != '0') { ?>
   <?php 

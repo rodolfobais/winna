@@ -1282,27 +1282,6 @@ class ControllerCatalogProduct extends Controller {
 			}
 		}
 
-
-				if ($this->db->query("SHOW TABLES LIKE '". DB_PREFIX ."product_newtabcontent'")->num_rows == 0) {
-            $sql = "CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "product_newtabcontent` (
-				  `product_id` int(11) NOT NULL,
-				  `language_id` int(11) NOT NULL,
-				  `newtabcontent`text NOT NULL,
-				   `name`varchar(255) NOT NULL
-				) ENGINE=MyISAM COLLATE=utf8_general_ci";
-            $this->db->query($sql);          
-      }
-					if (isset($this->request->post['product_newtabcontent'])) {
-			$data['product_newtabcontent'] = $this->request->post['product_newtabcontent'];
-		} elseif (isset($this->request->get['product_id'])) {
-			$data['product_newtabcontent'] = $this->model_catalog_product->getProductExtraContent($this->request->get['product_id']);
-		} else {
-			$data['product_newtabcontent'] = array();
-		}
-		
-		$data['version'] = str_replace(".","",VERSION);
-
-		
 		if (isset($this->request->post['points'])) {
 			$data['points'] = $this->request->post['points'];
 		} elseif (!empty($product_info)) {

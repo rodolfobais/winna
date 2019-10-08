@@ -397,7 +397,10 @@ class ControllerCatalogStock extends Controller {
 			$combinations = $this->request->post['product_combinations'];
 			
 			$row = 0;
-			foreach ($combinat ©X     ©X                    €®T             ÉT    h©X             ©X    i*       ©X            				$this->error['quantity'][$row] = true; 
+			foreach ($combinations as $combination) {
+				$quantity = $combination['quantity'];
+				if (!is_numeric($quantity)) {
+					$this->error['quantity'][$row] = true; 
 				}	else if ($quantity < 0) {
 					$this->error['quantity'][$row] = true; 
 				}

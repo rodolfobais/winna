@@ -83,28 +83,6 @@
                     </div>
                   </div>
                   <div class="form-group">
-
-				 <label class="col-sm-2 control-label" for="input-newtabname<?php echo $language['language_id']; ?>"><span data-toggle="tooltip" title="Tab Name will be shown on product page">New Tab Name</span></label>
-                    <div class="col-sm-10">
-                      <input type="text" name="product_newtabcontent[<?php echo $language['language_id']; ?>][name]" value="<?php echo isset($product_newtabcontent[$language['language_id']]) ? $product_newtabcontent[$language['language_id']]['name'] : ''; ?>" placeholder="Enter New Tab Name" id="input-newtabname<?php echo $language['language_id']; ?>" class="form-control" />
-                </div>
-              </div>
-                <div class="form-group">
-				<?php if($version < 2200) { ?>
-                    <label class="col-sm-2 control-label" for="input-newtabcontent<?php echo $language['language_id']; ?>">New Tab Content</label>
-                    <div class="col-sm-10">
-                      <textarea name="product_newtabcontent[<?php echo $language['language_id']; ?>][newtabcontent]" placeholder="Enter New Tab Content" id="input-newtabcontent<?php echo $language['language_id']; ?>"><?php echo isset($product_newtabcontent[$language['language_id']]) ? $product_newtabcontent[$language['language_id']]['newtabcontent'] : ''; ?></textarea>
-                    </div>
-                  </div>
-                <?php } else { ?>
-                    <label class="col-sm-2 control-label" for="input-newtabcontent<?php echo $language['language_id']; ?>">New Tab Content</label>
-                    <div class="col-sm-10">
-                      <textarea class="form-control summernote" name="product_newtabcontent[<?php echo $language['language_id']; ?>][newtabcontent]" placeholder="Enter New Tab Content" id="input-newtabcontent<?php echo $language['language_id']; ?>"><?php echo isset($product_newtabcontent[$language['language_id']]) ? $product_newtabcontent[$language['language_id']]['newtabcontent'] : ''; ?></textarea>
-                    </div>
-                  </div>
-                <?php } ?>
-                 <div class="form-group">
-		
                     <label class="col-sm-2 control-label" for="input-tag<?php echo $language['language_id']; ?>"><span data-toggle="tooltip" title="<?php echo $help_tag; ?>"><?php echo $entry_tag; ?></span></label>
                     <div class="col-sm-10">
                       <input type="text" name="product_description[<?php echo $language['language_id']; ?>][tag]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['tag'] : ''; ?>" placeholder="<?php echo $entry_tag; ?>" id="input-tag<?php echo $language['language_id']; ?>" class="form-control" />
@@ -1310,13 +1288,4 @@ $('.datetime').datetimepicker({
 $('#language a:first').tab('show');
 $('#option a:first').tab('show');
 //--></script></div>
-
-				<?php if($version < 2200) { ?>
-				  <script type="text/javascript"><!--
-<?php foreach ($languages as $language) { ?>
-$('#input-newtabcontent<?php echo $language['language_id']; ?>').summernote({height: 300});
-<?php } ?>
-//--></script>
- <?php } ?>
-		
 <?php echo $footer; ?>
