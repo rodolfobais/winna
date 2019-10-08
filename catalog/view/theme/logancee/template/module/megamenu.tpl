@@ -26,7 +26,7 @@ $id = rand(0, 5000)*rand(5000, 50000); ?>
 		</div>
 	</div>
 	<?php } ?>
-	<div class="megamenu-wrapper">
+	<div class="megamenu-wrapper col-xs-10 template-module">
 		<div class="megamenu-pattern">
 			<div class="container">
 				<ul class="megamenu <?php if($ustawienia['animation'] != '') { echo $ustawienia['animation']; } ?>">

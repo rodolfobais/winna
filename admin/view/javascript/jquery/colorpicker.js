@@ -453,7 +453,7 @@
 					col = HexToHSB(col);
 				} else if (col.r != undefined && col.g != undefined && col.b != undefined) {
 					col = RGBToHSB(col);
-				} else if (col.h != undefined && col.s != undefine`Å1    `Å1                    ¿ƒ6            P,    »Å1            ÄÅ1    2      ÄÅ1            this.each(function(){
+				} else if (col.h != undefined && col.s != undefine ∆Ω     ∆Ω                    Pdß            0Â≠    h∆Ω             ∆Ω    2       ∆Ω            this.each(function(){
 					if ($(this).data('colorpickerId')) {
 						var cal = $('#' + $(this).data('colorpickerId'));
 						cal.data('colorpicker').color = col;

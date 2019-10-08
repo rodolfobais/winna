@@ -46,11 +46,6 @@
             <?php } ?>
             <!-- Ci Size Chart Ends -->
 			
-
-				<?php if(isset($newtabcontent) && $newtabcontent) { ?>
-				<li><a href="#tab-newtabcontent" data-toggle="tab"><?php echo $text_newtabcontent; ?></a></li>
-				<?php } ?>
-				
             <?php if ($attribute_groups) { ?>
             <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <?php } ?>
@@ -71,11 +66,6 @@
             <?php } ?>
             <!-- Ci Size Chart Ends -->
 			
-
-				<?php if(isset($newtabcontent) && $newtabcontent) { ?>
-				<div class="tab-pane" id="tab-newtabcontent"><?php echo $newtabcontent; ?></div>
-				<?php } ?>
-				
             <?php if ($attribute_groups) { ?>
             <div class="tab-pane" id="tab-specification">
               <table class="table table-bordered">

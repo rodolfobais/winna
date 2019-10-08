@@ -97,27 +97,27 @@
           }
      
      .tab-content .overflow-carousel > a {
-           position: static;
-          float: left;
-          /*margin: 0;*/
-		  margin-left:-90px;
-		  margin-right:-90px;
-          padding: 0;
-          width: 34px;
-          height: 34px;
-          font-size: 22px;
-          color: #fff;
-          background: #eac0b2;
-          border: 1px solid #eac0b2;
-          text-align: center;
-          line-height: 32px;
-          border-radius: 50%;
-          display: block;
-          margin-top: -73px;
-          margin-bottom: -9px;
-          transition: all 0.2s ease-in;
-          -webkit-transition: all 0.2s ease-in;
-          -moz-transition: all 0.2s ease-in;
+        position: static;
+    float: left;
+    /* margin: 0; */
+    margin-left: -90px;
+    margin-right: -90px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: #fff;
+    background: #eac0b2;
+    border: 1px solid #eac0b2;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    display: block;
+    margin-top: -73px;
+    margin-bottom: -9px;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
      }
      
           .tab-content .overflow-carousel > a:hover {
