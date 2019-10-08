@@ -502,7 +502,7 @@ if($registry->has('theme_options') == true) {
          right: 22px;
          width: 20px;
          height: 20px;
-         color: #bf8673;
+         color: #eac0b2;
          font-size: 30px;
          text-align: center;
          text-decoration: none;
