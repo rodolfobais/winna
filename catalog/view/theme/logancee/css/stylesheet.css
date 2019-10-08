@@ -5579,7 +5579,6 @@ End Hover Effect
 .subscribe .input-box input {
   height:50px;
   border:1px solid black;
-  padding:0 140px 0 20px;
   width:77%!important;
   outline:none;
   color:#524848;
@@ -5990,6 +5989,17 @@ line-height:60px;
      font-size: 25px;
      display: block;
      line-height: 60px;
+ }
+
+ .menu-mobile .menu-principal{
+     left: -25px;
+ }
+ .menu-mobile .imagen-del-logo{
+     right: -20px;
+ }
+ .menu-mobile .imagen-corazon,  .menu-mobile .imagen-bolsa{
+     right: -10px;
+     padding-right: 0px;
  }
 
 .settings {
@@ -10051,11 +10061,11 @@ body.header-type-8 .header-layout-2 .sticky-header {
      margin-top: 7px;
 }
 
-     @media (max-width: 1098px) {
+     /*@media (max-width: 1098px) {
           .responsive body.header-type-8 .header-layout-2 .sticky-header {
                margin-top: 35px;
           }
-     }
+     }*/
 
 body.header-type-8 .breadcrumb {
      margin-top: -25px;

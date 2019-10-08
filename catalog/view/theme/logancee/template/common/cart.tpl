@@ -70,7 +70,7 @@ $cart_info = $theme_options->getCart(); ?>
                                                   <!--<button type="button" class="close" data-dismiss="asasd" aria-hidden="true" onclick="$('·ajaxcart').css('visibility', 'hidden')">×</button>-->
                                                   <h4 style="margin-top: 0px; margin-bottom: 0px; padding: 10px;"></i>Bolsa vac&iacute;a</h4>
                                              </div>
-                                             <div style="padding: 10px;"> No hay art&iacute;culos<br/> en su cesta de la compra. </div>
+                                             <div style="padding: 10px;"> No hay art&iacute;culos en su cesta. </div>
                                         </div>
                                    </div>
                               <?php } ?>

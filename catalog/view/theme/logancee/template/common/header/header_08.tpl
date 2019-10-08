@@ -83,14 +83,14 @@
                               	<div class="megamenu-wrapper">
                               		<div class="megamenu-pattern">
                               			<div class="container">
-                              				<ul class="megamenu shift-up">
+                              				<ul class="megamenu shift-up linea-86">
                               					<?php foreach ($categories as $category) { ?>
                               					<?php if ($category['children']) { ?>
                               					<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>
-                              						<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+                              						<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?> 90</strong></span></a>
                               					<?php } else { ?>
                               					<li>
-                              						<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+                              						<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?> 93</strong></span></a>
                               					<?php } ?>
                               						<?php if ($category['children']) { ?>
                               						<?php 
@@ -294,14 +294,14 @@
 					               			<div class="megamenu-wrapper">
 					               				<div class="megamenu-pattern">
 					               					<div class="container">
-					               						<ul class="megamenu shift-up">
+					               						<ul class="megamenu shift-uplinea-297">
 					               							<?php foreach ($categories as $category) { ?>
 					               								<?php if ($category['children']) { ?>
 					               									<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>
-					               										<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+					               										<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?> 301</strong></span></a>
 					               								<?php } else { ?>
 																	<li>
-					               										<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+					               										<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?> 304</strong></span></a>
 					               								<?php } ?>
 					               								<?php if ($category['children']) { ?>
 																	<?php 
@@ -352,7 +352,7 @@
 		<!-- END Top of pages -->
 
 		<!-- Top of pages mobile-->
-		<div id="top" class="menu-mobile <?php if($theme_options->get( 'header_layout' ) == 2) { echo 'fixed'; } else { echo 'full-width'; } ?>">
+		<div id="top" class="menu-mobile <?php if($theme_options->get( 'header_layout' ) == 2) { echo 'fixed'; } else { echo 'full-width'; } ?>" style="display: none;">
 			<div class="background-top"></div>
 			<div class="background">
 				<div class="shadow"></div>
@@ -384,14 +384,14 @@
 					               			<div class="megamenu-wrapper">
 					               				<div class="megamenu-pattern">
 					               					<div class="container">
-					               						<ul class="megamenu shift-up">
+					               						<ul class="megamenu shift-up linea-387">
 					               							<?php foreach ($categories as $category) { ?>
 					               								<?php if ($category['children']) { ?>
 					               									<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>
-					               										<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+					               										<a href="<?php echo $category['href'];?>" style="border-bottom: 1px solid grey;"><span><strong><?php echo $category['name']; ?> 391</strong></span></a>
 					               								<?php } else { ?>
 																	<li>
-					               										<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+					               										<a href="<?php echo $category['href']; ?>" style="border-bottom: 1px solid grey;"><span><strong><?php echo $category['name']; ?> 394</strong></span></a>
 					               								<?php } ?>
 					               								<?php if ($category['children']) { ?>
 																	<?php 
@@ -425,6 +425,11 @@
 					               								<?php } ?>
 					               							</li>
 					               						<?php } ?>
+														<li>
+															<a href="#" >
+																<span><strong>NEWSLETTER</strong></span>
+															</a>
+														</li>
 					               					</ul>
 					               				</div>
 					               			</div>
@@ -484,6 +489,7 @@
 			});
 		});
 		function cambiarImagen(){
+			//return;
 			var viewportWidth = $(window).width();
 			var imagen = "image/catalog/BANNERS/2019/WL_Web_Banner_Shop.jpg";
 			if (viewportWidth < 768) {
@@ -494,7 +500,7 @@
 				$(".menu-desktop").show();
 				$(".menu-mobile").hide();
 			}
-			$("#slider .camera_slider .owl-item img").attr("src",imagen);
+			//$("#slider .camera_slider .owl-item img").attr("src",imagen);
 		}
 	</script>
 </header>

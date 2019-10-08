@@ -176,6 +176,24 @@ if (localStorage.getItem('display') == 'list') {
 	display('<?php if($theme_options->get('default_list_grid') == '1') { echo 'grid'; } else { echo 'list'; } ?>');
 }
 //--></script> 
+
+<script>
+		$(window).load(function() {    
+			cambiarImagenCategory();			
+			$(window).resize(function () {
+				cambiarImagenCategory()
+			});
+		});
+		function cambiarImagenCategory(){
+			//return;
+			var viewportWidth = $(window).width();
+			var imagen = "image/catalog/BANNERS/2019/WL_Web_Banner_Shop.jpg";
+			if (viewportWidth < 768) {
+				imagen = "image/catalog/BANNERS/2019/WL_WebMobile_Home_Banner_Carrusel_1080x1272.png";
+			}
+			$("#slider .camera_slider .owl-item img").attr("src",imagen);
+		}
+	</script>
 </div>
 <?php include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_directory').'/template/new_elements/wrapper_bottom.tpl'); ?>
 <?php echo $footer; ?>

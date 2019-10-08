@@ -77,10 +77,10 @@
                               					<?php foreach ($categories as $category) { ?>
                               					<?php if ($category['children']) { ?>
                               					<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>
-                              						<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+                              						<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?> h01 80</strong></span></a>
                               					<?php } else { ?>
                               					<li>
-                              						<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+                              						<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?> h01 83</strong></span></a>
                               					<?php } ?>
                               						<?php if ($category['children']) { ?>
                               						<?php 
@@ -288,10 +288,10 @@
 										<?php foreach ($categories as $category) { ?>
 										<?php if ($category['children']) { ?>
 										<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>
-											<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+											<a href="<?php echo $category['href'];?>"><span><strong><?php echo $category['name']; ?> h01 291</strong></span></a>
 										<?php } else { ?>
 										<li>
-											<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?></strong></span></a>
+											<a href="<?php echo $category['href']; ?>"><span><strong><?php echo $category['name']; ?> h01 294</strong></span></a>
 										<?php } ?>
 											<?php if ($category['children']) { ?>
 											<?php 

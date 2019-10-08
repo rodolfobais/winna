@@ -2,58 +2,50 @@
 $theme_options = $registry->get('theme_options');
 $config = $registry->get('config'); 
 include('catalog/view/theme/' . $config->get($config->get('config_theme') . '_directory') . '/template/new_elements/wrapper_top.tpl'); ?>
+  <style>
+    .form-group{
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+  </style>
 
+    <div class="col-sm-6">
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
           <legend><?php echo $text_your_details; ?></legend>
-          <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-firstname"><?php echo $entry_firstname; ?> </label>
-            <div class="col-sm-10">
-              <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="<?php echo $entry_firstname; ?>" id="input-firstname" class="form-control" />
-              <?php if ($error_firstname) { ?>
-              <div class="text-danger"><?php echo $error_firstname; ?></div>
-              <?php } ?>
-            </div>
+          <div class="form-group col-sm-6">
+            <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="* <?php echo $entry_firstname; ?>" id="input-firstname" class="form-control" />
+            <?php if ($error_firstname) { ?>
+            <div class="text-danger"><?php echo $error_firstname; ?></div>
+            <?php } ?>
           </div>
-          <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-lastname"><?php echo $entry_lastname; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
-              <?php if ($error_lastname) { ?>
-              <div class="text-danger"><?php echo $error_lastname; ?></div>
-              <?php } ?>
-            </div>
+          <div class="form-group col-sm-6">
+            <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="* <?php echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
+            <?php if ($error_lastname) { ?>
+            <div class="text-danger"><?php echo $error_lastname; ?></div>
+            <?php } ?>
           </div>
-          <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
-            <div class="col-sm-10">
-              <input type="email" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
-              <?php if ($error_email) { ?>
-              <div class="text-danger"><?php echo $error_email; ?></div>
-              <?php } ?>
-            </div>
+          
+          <div class="form-group col-sm-6">
+            <input type="email" name="email" value="<?php echo $email; ?>" placeholder="* <?php echo $entry_email; ?>" id="input-email" class="form-control" />
+            <?php if ($error_email) { ?>
+            <div class="text-danger"><?php echo $error_email; ?></div>
+            <?php } ?>
           </div>
-          <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_telephone; ?></label>
-            <div class="col-sm-10">
-              <input type="tel" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
-              <?php if ($error_telephone) { ?>
-              <div class="text-danger"><?php echo $error_telephone; ?></div>
-              <?php } ?>
-            </div>
+          <div class="form-group col-sm-6">
+            <input type="tel" name="telephone" value="<?php echo $telephone; ?>" placeholder="* <?php echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
+            <?php if ($error_telephone) { ?>
+            <div class="text-danger"><?php echo $error_telephone; ?></div>
+            <?php } ?>
           </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="fax" value="<?php echo $fax; ?>" placeholder="<?php echo $entry_fax; ?>" id="input-fax" class="form-control" />
-            </div>
+          <div class="form-group col-sm-6">
+            <input type="text" name="fax" value="<?php echo $fax; ?>" placeholder="<?php echo $entry_fax; ?>" id="input-fax" class="form-control" />
           </div>
           <?php foreach ($custom_fields as $custom_field) { ?>
           <?php if ($custom_field['location'] == 'account') { ?>
           <?php if ($custom_field['type'] == 'select') { ?>
           <div class="form-group<?php echo ($custom_field['required'] ? ' required' : ''); ?> custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-            <label class="col-sm-2 control-label" for="input-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
-            <div class="col-sm-10">
+            <div class="col-sm-6">
               <select name="custom_field[<?php echo $custom_field['custom_field_id']; ?>]" id="input-custom-field<?php echo $custom_field['custom_field_id']; ?>" class="form-control">
                 <option value=""><?php echo $text_select; ?></option>
                 <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
@@ -72,8 +64,7 @@ include('catalog/view/theme/' . $config->get($config->get('config_theme') . '_di
           <?php } ?>
           <?php if ($custom_field['type'] == 'radio') { ?>
           <div class="form-group<?php echo ($custom_field['required'] ? ' required' : ''); ?> custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-            <label class="col-sm-2 control-label"><?php echo $custom_field['name']; ?></label>
-            <div class="col-sm-10">
+            <div class="col-sm-6">
               <div>
                 <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
                 <div class="radio">
@@ -209,6 +200,7 @@ include('catalog/view/theme/' . $config->get($config->get('config_theme') . '_di
           </div>
         </div>
       </form>
+    </div>
 
 <script type="text/javascript"><!--
 // Sort the custom fields
