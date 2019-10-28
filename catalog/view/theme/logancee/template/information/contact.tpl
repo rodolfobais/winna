@@ -1,138 +1,108 @@
-<?php echo $header; 
+<?php 
+echo $header; 
 $theme_options = $registry->get('theme_options');
 $config = $registry->get('config'); 
 include('catalog/view/theme/' . $config->get($config->get('config_theme') . '_directory') . '/template/new_elements/wrapper_top.tpl'); ?>
+<style>
+.how-to-contact .titulo, .titulo-representantes {
+    border-top: 2px solid;
+    border-bottom: 1px solid;    
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.inner-contact{
+     width: 100%;
+    text-align: left !important;
+}
+
+.how-to-contact .pais-tienda {
+     color: #bf8673;
+    font-size: 25px;
+    font-family: Merriweather;
+    font-style: italic;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+.representantes p{
+     color: #999;
+}
+.representantes p b{
+     color: black;
+}
+
+.contact-map {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+</style>
 
 <div class="contact-page">
-     <div class="how-to-contact">
-          <div class="row">
-               <div class="contact-way col-lg-4 col-xs-12">
-                    <div class="inner-contact">
-                         <span class="icon_mobile icon-contact">&nbsp;</span>
-                         <h3><?php echo $text_telephone; ?></h3>
-                         <p><?php echo $telephone; ?></p>
-                         <?php if ($fax) { ?>
-                         <p><?php echo $text_fax; ?>: <?php echo $fax; ?></p>
-                         <?php } ?>
-                    </div>
-               </div>
-               
-               <div class="contact-way col-lg-4 col-xs-12">
-                    <div class="inner-contact">
-                         <span class="icon_pin_alt icon-contact">&nbsp;</span>
-                         <h3><?php echo $store; ?></h3>
-                         <p><?php echo $address; ?></p>
-                    </div>
-               </div>
-               
-               <div class="contact-way col-lg-4 col-xs-12">
-                    <div class="inner-contact">
-                         <span class=" icon_clock_alt icon-contact">&nbsp;</span>
-                         <?php if ($open) { ?>
-                         <h3><?php echo $text_open; ?></h3>
-                         <p><?php echo $open; ?></p>
-                         <?php } ?>
-                         <?php if ($comment) { ?>
-                         <p><strong><?php echo $text_comment; ?></strong><br><?php echo $comment; ?></p>
-                         <?php } ?>
+     <div class="row">
+          <div class="how-to-contact col-xs-2">
+               <div class="row">               
+                    <div class="contact-way col-xs-12">
+                         <div class="inner-contact">
+                              <div class="titulo">EXCLUSIVOS</div>
+                              <div class="pais-tienda">Argentina</div>
+                              <div class="localidad-tienda"><b>PALERMO SOHO</b></div>
+                              <div class="texto">El salvador 4719, CABA</div>
+                              <div class="texto">Tel: 0054 11 4613-9691</div>
+                              <div class="texto">WApp: +53 9 11 3818-2602</div>
+                              <div class="texto">Lun a Sáb: 10.30 a 20.00 hs</div>
+                              <div class="texto">Dom: 14.00 a 20.00 hs</div>
+                              <div class="texto">Feriados: 14.00 a 20.00 hs</div>
+
+                              <div class="pais-tienda">Uruguay</div>
+                              <div class="localidad-tienda"><b>PUNTA CARRETAS</b></div>
+                              <div class="texto">21 de Septiembre 2895 bis, Montevideo</div>
+                              <div class="texto">Tel: 00598 2605-1692</div>
+                              <div class="texto">WApp: +598 9500-0079</div>
+                              <div class="texto">Lun a Sáb: 10.00 a 19.00 hs</div>
+                              <div class="texto">Dom: Cerrado</div>
+                         </div>
                     </div>
                </div>
           </div>
-     </div>
-     
-     <?php if ($locations) { ?>
-     <h3><?php echo $text_store; ?></h3>
-     <div class="panel-group" id="accordion">
-       <?php foreach ($locations as $location) { ?>
-       <div class="panel panel-default">
-         <div class="panel-heading">
-           <h4 class="panel-title"><a href="#collapse-location<?php echo $location['location_id']; ?>" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"><?php echo $location['name']; ?> <i class="fa fa-caret-down"></i></a></h4>
-         </div>
-         <div class="panel-collapse collapse" id="collapse-location<?php echo $location['location_id']; ?>">
-           <div class="panel-body">
-             <div class="row">
-               <?php if ($location['image']) { ?>
-               <div class="col-sm-3"><img src="<?php echo $location['image']; ?>" alt="<?php echo $location['name']; ?>" title="<?php echo $location['name']; ?>" class="img-thumbnail" /></div>
+          
+          
+          <div class="col-xs-10">
+               <?php if ($geocode) { ?>
+               <div class="contact-map"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="1170" height="470" src="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&ie=UTF8&t=roadmap&z=16&iwloc=B&output=embed"></iframe></div>
                <?php } ?>
-               <div class="col-sm-3"><strong><?php echo $location['name']; ?></strong><br />
-                 <address>
-                 <?php echo $location['address']; ?>
-                 </address>
-                 <?php if ($location['geocode']) { ?>
-                  <a href="https://maps.google.com/maps?q=<?php echo urlencode($location['geocode']); ?>&hl=<?php echo $geocode_hl; ?>&t=m&z=15" target="_blank" class="btn btn-info"><i class="fa fa-map-marker"></i> <?php echo $button_map; ?></a>
-                 <?php } ?>
-               </div>
-               <div class="col-sm-3"> <strong><?php echo $text_telephone; ?></strong><br>
-                 <?php echo $location['telephone']; ?><br />
-                 <br />
-                 <?php if ($location['fax']) { ?>
-                 <strong><?php echo $text_fax; ?></strong><br>
-                 <?php echo $location['fax']; ?>
-                 <?php } ?>
-               </div>
-               <div class="col-sm-3">
-                 <?php if ($location['open']) { ?>
-                 <strong><?php echo $text_open; ?></strong><br />
-                 <?php echo $location['open']; ?><br />
-                 <br />
-                 <?php } ?>
-                 <?php if ($location['comment']) { ?>
-                 <strong><?php echo $text_comment; ?></strong><br />
-                 <?php echo $location['comment']; ?>
-                 <?php } ?>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-       <?php } ?>
+          </div>
      </div>
-     <?php } ?>
-     
-     <div class="contact-form">
-          <div id="messages_product_view"></div>
-          <form action="<?php echo $action; ?>" id="contactForm" method="post" enctype="multipart/form-data">
-               <div class="fieldset">
-                    <h2 class="legend"><?php echo $text_contact; ?></h2>
-                    <ul class="form-list">
-                         <li class="fields">
-                              <div class="field">
-                                   <div class="input-box">
-                                        <input name="name" id="name" title="Name" value="<?php echo $name; ?>" class="input-text required-entry" type="text" placeholder="<?php echo $entry_name; ?>">
-                                        
-                                        <?php if ($error_name) { ?>
-                                        <div class="text-danger"><?php echo $error_name; ?></div>
-                                        <?php } ?>
-                                   </div>
-                              </div>
-                              
-                              <div class="field">
-                                   <div class="input-box">
-                                        <input name="email" id="email" title="Email" value="<?php echo $email; ?>" class="input-text required-entry validate-email" type="text" placeholder="<?php echo $entry_email; ?>">
-                                        
-                                        <?php if ($error_email) { ?>
-                                        <div class="text-danger"><?php echo $error_email; ?></div>
-                                        <?php } ?>
-                                   </div>
-                              </div>
-                         </li>
-                         <li class="wide"><div class="input-box"><textarea name="enquiry" id="comment" title="<?php echo $entry_enquiry; ?>" class="required-entry input-text" rows="5" placeholder="<?php echo $entry_enquiry; ?>"><?php echo $enquiry; ?></textarea>
-                              <?php if ($error_enquiry) { ?>
-                              <div class="text-danger"><?php echo $error_enquiry; ?></div>
-                              <?php } ?>
-                         </div></li>
-                    </ul>
+     <div class="row representantes">
+          <div class="col-xs-12">
+               <div class="col-xs-12 titulo-representantes">Representantes</div>
+
+               <div class="col-xs-3">
+                    <p><b>Ciudad de Buenos Aires</b></p>
+                    <p>Xxxxxx, Local 7<br> Av. Rivadavia 4975, Caballito</p>
+                    <p>Xxxxxx, Local 3<br> Av. Rivadavia 5040, Caballito</p>
                </div>
-               
-               <div class="buttons-set">
-                    <button type="submit" title="Send Message" class="button"><span><span><?php echo $button_submit; ?></span></span></button>
+               <div class="col-xs-3">
+                    <p><b>Gran Buenos Aires</b></p>
+                    <p>Xxxxxx<br> Int. Bonifacini 1934, San Martin</p>
+                    <p>Xxxxxx<br> Alvear 515, Quilmes</p>
+                    <p>Xxxxxx<br> Italia 1289, San Antonio de Padua</p>
                </div>
-          </form>  
+               <div class="col-xs-2">
+                    <p><b>C&oacute;rdoba</b></p>
+                    <p>Xxxxxx<br> R. Nu&ntilde;ez 4084, Cerro de las Rosas</p>
+                    <p>Xxxxxx<br> Alvear 737, R&iacute;o Cuarto</p>
+                    <p>Xxxxxx<br> V&eacute;lez Sarsfield 114, R&iacute;o Tercero</p>
+               </div>
+               <div class="col-xs-2">
+                    <p><b>Entre Ríos</b></p>
+                    <p>Xxxxxx, local 8<br> Gral. J. J. de Urquiza 1086, Paran&aacute;</p>
+               </div>
+               <div class="col-xs-2">
+                    <p><b>Neuqu&eacute;n</b></p>
+                    <p>Xxxxxx<br> Julio A. Roca 166, Xxxxxx</p>
+               </div>
+          </div>
      </div>
-     
-     <?php if ($geocode) { ?>
-     <div class="contact-map"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="1170" height="470" src="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&ie=UTF8&t=roadmap&z=16&iwloc=B&output=embed"></iframe></div>
-     <?php } ?>
 </div>
   
 <?php include('catalog/view/theme/' . $config->get($config->get('config_theme') . '_directory') . '/template/new_elements/wrapper_bottom.tpl'); ?>

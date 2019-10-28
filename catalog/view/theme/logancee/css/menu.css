@@ -1232,6 +1232,7 @@
 		margin-top: -2px;
 		left: 0px;
 		width: 300px;
+		border: 1px solid #bf8673;
 	}
 	
 		.responsive ul.megamenu > li {
@@ -1442,9 +1443,9 @@
     border-bottom: 0px solid #eac0b2;
 }
 
-.menu-mobile .megamenu-pattern{
+/*.menu-mobile .megamenu-pattern{
 	border: 1px solid #bf8673;
-}
+}*/
 
 .menu-mobile .megamenu{
 	padding-left: 10px;

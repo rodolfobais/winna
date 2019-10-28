@@ -32,13 +32,22 @@ $cart_info = $theme_options->getCart(); ?>
                                    <?php foreach ($products as $product) { ?>
                                    <li class="item">
                                         <?php if ($product['thumb']) { ?>
-                                        <a href="<?php echo $product['href']; ?>" title="London t-shirt" class="product-image"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>"/>
-                                        <span class="qty-count"><?php echo $product['quantity']; ?>x</span></a>
+                                        <a href="<?php echo $product['href']; ?>" title="London t-shirt" class="product-image">
+                                             <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>"/>
+                                             <!--<span class="qty-count"><?php echo $product['quantity']; ?>x</span>-->
+                                        </a>
                                         <?php } ?>
                                         <div class="product-details show-grid">
-                                             <p class="product-name clearfix"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></p>
-                                             <div class="items clearfix"><span class="price"><?php echo $product['total']; ?></span></div>
-                                             <div class="access clearfix"><a ref="javascript:;" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn-remove deletecart"><i aria-hidden="true" class="icon_close"></i></a></div>
+                                             <p class="product-name clearfix">
+                                                  <a href="<?php echo $product['href']; ?>">
+                                                       <b><?php echo $product['name']; ?></b>
+                                                  </a>
+                                                  <?php foreach ($product['option'] as $options) { ?>
+                                                       <div><?php echo $options['name']; ?>: <?php echo $options['value']; ?></div>
+                                                  <?php } ?>
+                                             </p>
+                                             <!--<div class="items clearfix"><span class="price"><?php echo $product['total']; ?></span></div>
+                                             <div class="access clearfix"><a ref="javascript:;" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn-remove deletecart"><i aria-hidden="true" class="icon_close"></i></a></div>-->
                                         </div>
                                    </li>
                                    <?php } ?>
@@ -57,11 +66,11 @@ $cart_info = $theme_options->getCart(); ?>
                               <?php $left = false; $right = false; foreach ($totals as $total) { ?>
                                    <?php $left = $total['title']; $right = $total['text']; ?>
                               <?php } ?>
-                              <p class="subtotal"><span class="title"><?php echo $left; ?></span> <span class="price"><?php echo $right; ?></span></p>
+                              <!--<p class="subtotal"><span class="title"><?php echo $left; ?></span> <span class="price"><?php echo $right; ?></span></p>-->
                               
                               <div class="typo-ajax-checkout clearfix">
                                    <a href="<?php echo $cart; ?>" class="button view-cart"><span><?php echo $text_cart; ?></span></a>
-                                   <a class="button view-checkout" href="<?php echo $checkout; ?>"><span><?php echo $text_checkout; ?></span></a>
+                                   <!--<a class="button view-checkout" href="<?php echo $checkout; ?>"><span><?php echo $text_checkout; ?></span></a>-->
                               </div>
                               <?php } else { ?>
                                    <div class="no-items-in-cart">

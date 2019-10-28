@@ -80,7 +80,28 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 		<?php } ?>
 	</div>
 	<div class="right">
-		<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+		<div class="name">
+			<a href="<?php echo $product['href']; ?>">
+				<?php echo $product['name']; ?>
+				<?php if($theme_options->get( 'display_add_to_compare' ) != '0' || $theme_options->get( 'display_add_to_wishlist' ) != '0') { ?>
+					<div class="addtolist">
+						<div class="add-to-links">
+							<?php if($theme_options->get( 'display_add_to_wishlist' ) != '0') { ?>
+							<div class="wishlist">
+									<a onclick="wishlist.add('<?php echo $product['product_id']; ?>');" title="" data-toggle="tooltip" data-placement="top" class="link-wishlist" data-original-title="<?php if($theme_options->get( 'add_to_wishlist_text', $config->get( 'config_language_id' ) ) != '') { echo $theme_options->get( 'add_to_wishlist_text', $config->get( 'config_language_id' ) ); } else { echo 'Add to wishlist'; } ?>"><i aria-hidden="true" class="icon_heart_alt"></i></a>
+							</div>
+							<?php } ?>
+							
+							<?php if($theme_options->get( 'display_add_to_compare' ) != '0') { ?>
+							<div class="compare">
+									<a rel="nofollow" onclick="compare.add('<?php echo $product['product_id']; ?>');" title="" data-toggle="tooltip" data-placement="top" class="link-compare" data-original-title="<?php if($theme_options->get( 'add_to_compare_text', $config->get( 'config_language_id' ) ) != '') { echo $theme_options->get( 'add_to_compare_text', $config->get( 'config_language_id' ) ); } else { echo 'Add to compare'; } ?>"><i aria-hidden="true" class="icon_piechart"></i></a>
+							</div>
+							<?php } ?>
+						</div>
+					</div>
+				<?php } ?>
+			</a>
+		</div>
 		<div class="price">
 			<?php if (!$product['special']) { ?>
 			<?php echo $product['price']; ?>
@@ -103,25 +124,7 @@ if($theme_options->get( 'latest_text', $config->get( 'config_language_id' ) ) !=
 		               <a onclick="cart.add('<?php echo $product['product_id']; ?>');" class="button btn-cart"><?php echo $button_cart; ?></a>
 		               <?php } ?>
 		          <?php } ?>
-		     </div>
-		     
-		     <?php if($theme_options->get( 'display_add_to_compare' ) != '0' || $theme_options->get( 'display_add_to_wishlist' ) != '0') { ?>
-		     <div class="addtolist">
-		          <div class="add-to-links">
-		               <?php if($theme_options->get( 'display_add_to_wishlist' ) != '0') { ?>
-		               <div class="wishlist">
-		                    <a onclick="wishlist.add('<?php echo $product['product_id']; ?>');" title="" data-toggle="tooltip" data-placement="top" class="link-wishlist" data-original-title="<?php if($theme_options->get( 'add_to_wishlist_text', $config->get( 'config_language_id' ) ) != '') { echo $theme_options->get( 'add_to_wishlist_text', $config->get( 'config_language_id' ) ); } else { echo 'Add to wishlist'; } ?>"><i aria-hidden="true" class="icon_heart_alt"></i></a>
-		               </div>
-		               <?php } ?>
-		               
-		               <?php if($theme_options->get( 'display_add_to_compare' ) != '0') { ?>
-		               <div class="compare">
-		                    <a rel="nofollow" onclick="compare.add('<?php echo $product['product_id']; ?>');" title="" data-toggle="tooltip" data-placement="top" class="link-compare" data-original-title="<?php if($theme_options->get( 'add_to_compare_text', $config->get( 'config_language_id' ) ) != '') { echo $theme_options->get( 'add_to_compare_text', $config->get( 'config_language_id' ) ); } else { echo 'Add to compare'; } ?>"><i aria-hidden="true" class="icon_piechart"></i></a>
-		               </div>
-		               <?php } ?>
-		          </div>
-		     </div>
-		     <?php } ?>
+		     </div>		    
 		</div>
 		<?php } ?>
 	</div>

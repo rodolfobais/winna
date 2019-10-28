@@ -294,7 +294,7 @@
 					               			<div class="megamenu-wrapper">
 					               				<div class="megamenu-pattern">
 					               					<div class="container">
-					               						<ul class="megamenu shift-uplinea-297">
+					               						<ul class="megamenu shift-up linea-297">
 					               							<?php foreach ($categories as $category) { ?>
 					               								<?php if ($category['children']) { ?>
 					               									<li class="with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p>

@@ -8,6 +8,43 @@ if($column_right != '') $grid_center = $grid_center-3;
 require_once( DIR_TEMPLATE.$config->get($config->get('config_theme') . '_directory')."/lib/module.php" );
 $modules_old_opencart = new Modules($registry); ?>
 
+<script>
+	$(window).load(function() {    
+		cambiarImagenHome();			
+		$(window).resize(function () {
+			cambiarImagenHome()
+		});
+	});
+	function cambiarImagenHome(){
+		//return;
+		var viewportWidth = $(window).width();
+		var desde = "";
+		var hasta = "";
+		var height = "500px";
+		if (viewportWidth < 768) {
+			desde = "_Web_";
+			hasta = "_Mobile_";
+			height = "221px";
+		}else{
+			hasta = "_Web_";
+			desde = "_Mobile_";
+		}
+		$( ".camera_slider .owl-item img" ).each(function( index ) {
+			var src = $(this).attr("src");
+			src = src.replace(desde, hasta);
+			$(this).attr("src", src);
+		});
+		$( ".main-content .block-img img" ).each(function( index ) {
+			var src = $(this).attr("src");
+			src = src.replace(desde, hasta);
+			$(this).attr("src", src);
+		});
+		$( ".main-content .block-static-top" ).each(function( index ) {
+			$(this).css("height", height);
+		});
+		//$("#slider .camera_slider .owl-item img").attr("src",imagen);
+	}
+</script>
 <!-- MAIN CONTENT
 	================================================== -->
 <div class="main-content <?php if($theme_options->get( 'content_layout' ) == 2) { echo 'fixed'; } else { echo 'full-width'; } ?> home">

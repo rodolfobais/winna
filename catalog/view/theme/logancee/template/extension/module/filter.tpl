@@ -1,7 +1,7 @@
 <?php
 //echo "breadcrumbs<pre>"; print_r($breadcrumbs); echo "</pre>";
 ?>
-<div class="col-md-12  hidden-xs" style="height: 65px; border-top: 2px solid; border-bottom: 1px solid;">
+<div class="col-md-12" id="cuadro-filtros-desktop" style="height: 65px; border-top: 2px solid; border-bottom: 1px solid;">
   <div class="col-md-3" style="top: 50%;transform: translateY(-50%);border-right: 1px solid;height: 40px;">
     <div style=" top: 10px; position: absolute;">
       <?php foreach ($breadcrumbs as $breadcrumb) { ?>

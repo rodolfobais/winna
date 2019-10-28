@@ -1,24 +1,57 @@
-<?php echo $header; 
+<?php 
+echo $header; 
 if(isset($mfilter_json)) {
 	if(!empty($mfilter_json)) { 
 		echo '<div id="mfilter-json" style="display:none">' . base64_encode( $mfilter_json ) . '</div>'; 
 	} 
 }
 
+
+
 $theme_options = $registry->get('theme_options');
 $config = $registry->get('config'); 
 //echo 'catalog/view/theme/'.$config->get($config->get('config_theme') . '_directory').'/template/new_elements/wrapper_top.tpl';
-include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_directory').'/template/new_elements/wrapper_top.tpl'); ?>
+include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_directory').'/template/new_elements/wrapper_top.tpl'); 
 
+//echo "<pre>data: ".print_r($data, true)."</pre>";
+//echo "<pre>filter_groups: ".print_r($filter_groups, true)."</pre>";die;
 
+?>
+<script>
+	$(window).load(function() {    
+		ocultarMostrarFiltrosOrdenamientos();			
+		$(window).resize(function () {
+			ocultarMostrarFiltrosOrdenamientos()
+		});
+	});
+	function ocultarMostrarFiltrosOrdenamientos(){
+		//return;
+		var viewportWidth = $(window).width();
+		if (viewportWidth < 768) {
+			$('#cuadro-filtros-desktop').hide();
+			$('#cuadro-ordenamientos-desktop').hide();
+			//cuadro-ordenamientos-filtros-mobile
+			$('#cuadro-ordenamientos-filtros-mobile').show();
+		}else{
+			$('#cuadro-filtros-desktop').show();
+			$('#cuadro-ordenamientos-desktop').show();
+			$('#cuadro-ordenamientos-filtros-mobile').hide();
+		}
+	}
 
-
-
-
-
-
+	function ocultarMostrarFilOrdMob(acc){
+		if(acc == "mostrar"){//mostrar-ordenamientos-filtros-mobile
+			$('#cuadro-ordenamientos-filtros-mobile .item').show();
+			$('#cuadro-ordenamientos-filtros-mobile #mostrar-ordenamientos-filtros-mobile').hide();
+			$('#cuadro-ordenamientos-filtros-mobile #ocultar-ordenamientos-filtros-mobile').show();
+		}else{
+			$('#cuadro-ordenamientos-filtros-mobile .item').hide();
+			$('#cuadro-ordenamientos-filtros-mobile #mostrar-ordenamientos-filtros-mobile').show();
+			$('#cuadro-ordenamientos-filtros-mobile #ocultar-ordenamientos-filtros-mobile').hide();
+		}
+	}
+</script>
 <div id="mfilter-content-container">
-
   <?php if ($thumb || $description) { ?>
 	<div class="category-info clearfix">
 		<?php if ($thumb) { ?>
@@ -29,11 +62,7 @@ include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_dire
 		<?php } ?>
 	</div>
   <?php } ?>
-  <?php if ($categories && $theme_options->get('refine_search_style') != '2') { ?>
-  
-  
-  
-  
+  <?php if ($categories && $theme_options->get('refine_search_style') != '2') { ?>  
   <h2 class="refine_search"><?php echo $text_refine; ?></h2>
   <div class="category-list<?php if ($theme_options->get('refine_search_style') == '1') { echo ' category-list-text-only'; } ?>">
   	<div class="row">
@@ -77,6 +106,7 @@ include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_dire
   <?php if ($products) { ?>
   
   <!-- Filter -->
+  	
 	<!--
 	<div class="product-filter clearfix">
 		<div class="options">
@@ -107,12 +137,44 @@ include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_dire
 </div>
 
 <!-- bread-crumb end here -->
-	
-	
- 
-  
- 
-  
+	<!-- Ordenamientos-->
+	<div class="product-filter clearfix" id="cuadro-ordenamientos-desktop">	
+		<a href="index.php?route=product/category&path=<?php echo $_GET['path']; ?>&sort=p.date_available&order=DESC">Lo nuevo</a> | 
+		<a href="index.php?route=product/category&path=<?php echo $_GET['path']; ?>&sort=p.price&order=DESC">Mayor a Menor</a> | 
+		<a href="index.php?route=product/category&path=<?php echo $_GET['path']; ?>&sort=p.price&order=ASC">Menor a Mayor</a>
+	</div> 
+
+	<!-- Ordenamientos y filtros mobile-->
+	<div class="product-filter clearfix" id="cuadro-ordenamientos-filtros-mobile">	
+		<div class="titulo">
+			FILTRAR Y CLASIFICAR 
+			<i class="fa fa-sliders" onclick="ocultarMostrarFilOrdMob('mostrar')" id="mostrar-ordenamientos-filtros-mobile"></i>
+			<i class="fa fa-close" onclick="ocultarMostrarFilOrdMob('ocultar')" id="ocultar-ordenamientos-filtros-mobile" style="display:none"></i>
+		</div>
+		<div class="item"  style="display:none">
+			ORDENAR POR
+			<select onchange="location=this.value;">
+				<option value="index.php?route=product/category&path=<?php echo $_GET['path']; ?>&sort=p.sort_order&;order=ASC">Defecto</option>
+				<option value="index.php?route=product/category&path=<?php echo $_GET['path']; ?>&sort=p.date_available&order=DESC">Lo nuevo</option>
+				<option value="index.php?route=product/category&path=<?php echo $_GET['path']; ?>&sort=p.price&order=DESC">Mayor a Menor</option>
+				<option value="index.php?route=product/category&path=<?php echo $_GET['path']; ?>&sort=p.price&order=ASC">Menor a Mayor</option>
+			</select>
+		</div>
+		<?php foreach ($filter_groups as $filter_group) { ?>
+			<div class="item"  style="display:none">
+				<?php echo $filter_group['name']; ?>
+				<select id="filter-group<?php echo $filter_group['filter_group_id']; ?>" onchange="aplicarFiltros()" class="filtro_producto" >
+					<option value=""></option>
+					<?php foreach ($filter_group['filter'] as $filter) { ?>
+					<option value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" 
+						<?php echo (in_array($filter['filter_id'], $filter_category) ? "selected" : "") ?>>
+						<?php echo $filter['name']; ?>
+					</option>
+					<?php } ?>
+				</select>
+			</div>
+		<?php } ?>
+	</div> 
   <!-- Products grid -->
   <?php 
   $class = 3; 
@@ -176,24 +238,32 @@ if (localStorage.getItem('display') == 'list') {
 	display('<?php if($theme_options->get('default_list_grid') == '1') { echo 'grid'; } else { echo 'list'; } ?>');
 }
 //--></script> 
-
 <script>
-		$(window).load(function() {    
-			cambiarImagenCategory();			
-			$(window).resize(function () {
-				cambiarImagenCategory()
-			});
+	$(window).load(function() {    
+		cambiarImagenCategory();			
+		$(window).resize(function () {
+			cambiarImagenCategory()
 		});
-		function cambiarImagenCategory(){
-			//return;
-			var viewportWidth = $(window).width();
-			var imagen = "image/catalog/BANNERS/2019/WL_Web_Banner_Shop.jpg";
-			if (viewportWidth < 768) {
-				imagen = "image/catalog/BANNERS/2019/WL_WebMobile_Home_Banner_Carrusel_1080x1272.png";
-			}
-			$("#slider .camera_slider .owl-item img").attr("src",imagen);
+	});
+	function cambiarImagenCategory(){
+		//return;
+		var viewportWidth = $(window).width();
+		var desde = "";
+		var hasta = "";
+		if (viewportWidth < 768) {
+			desde = "_Web_";
+			hasta = "_Mobile_";
+		}else{
+			hasta = "_Web_";
+			desde = "_Mobile_";
 		}
-	</script>
+		$( ".camera_slider .owl-item img" ).each(function( index ) {
+			var src = $(this).attr("src");
+			src = src.replace(desde, hasta);
+			$(this).attr("src", src);
+		});
+	}
+</script>
 </div>
 <?php include('catalog/view/theme/'.$config->get($config->get('config_theme') . '_directory').'/template/new_elements/wrapper_bottom.tpl'); ?>
 <?php echo $footer; ?>
